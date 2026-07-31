@@ -228,7 +228,38 @@ anonymity scrub returned zero hits.
 
 ---
 
-## 6. What is deliberately absent
+## 6. Before you post — run these three checks on the FINAL text
+
+These are not optional polish; each has already caught a real defect.
+
+1. **Claims check.** For every phrase you wrote of the form "we release /
+   ships / audited configuration / available at", confirm it appears in
+   `rebuttal_results.json["E16"].claims_checklist` (33 rows, each with a
+   `path` and `exists: true`). A claim you introduced that is *not* in that
+   list has no verified repository path behind it — either point it at a
+   real path or delete the sentence. `claims_all_live` was true at commit
+   time; it says nothing about sentences added afterwards.
+
+2. **Superseded-number sweep.** Search your draft for these strings. Every
+   one is wrong and was circulated before the P19 recovery:
+   - `0.105` / "72 scenes" in a 4-method context → now **96 scenes,
+     LCB 0.1116** (72 scenes is LCB 0.0700)
+   - `0.148` in a 5-method context → now **LCB 0.1027** at 120 scenes
+   - `2,915` or `2,228` → both are now **3,473**
+   - "common-coverage subpopulation" → withdrawn entirely; E9 runs on the
+     full intersection
+   - any statement that nerfacto/BioNeRF coverage is incomplete, or that
+     E18's coverage bias is a live limitation → it was fixed (E19)
+
+3. **Rule sweep.** Re-read section 1 against what you actually wrote,
+   especially rule 1 (no E17 numbers — camera-ready only), rule 2 (post-hoc
+   labels), rule 3 (E11's label), and rule 6 (E9 coverage).
+
+If a check fails, fix the text rather than the check.
+
+---
+
+## 7. What is deliberately absent
 
 - **E7** is superseded by E13; the gate-failure framing ("logs not
   published") is still true and is *why* E13 exists.
