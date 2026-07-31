@@ -81,14 +81,31 @@ def eval_joint(pops: dict, mm: dict, subset_ids: set):
 def main() -> None:
     # ---------------- populations ----------------
     pop_k6, pops_e1, common = load_populations()
-    nerfacto = to_df(load_json_dir(str(SCRATCH / "output_json_nerfacto/json/*.json"),
-                                   "psnr", "ssim", "lpips"))
-    bio = {}
-    for d in ("output_json_bionerf/DISH", "output_json5/DISH", "output_json6/DISH"):
-        for k, v in load_json_dir(str(SCRATCH / d / "*.json"),
-                                  "fine_psnr", "fine_ssim", "fine_lpips").items():
-            bio.setdefault(k, v)
-    bionerf = to_df(bio)
+    # Read the committed metrics CSVs rather than the harvested scratch JSON
+    # dirs: those lived in /tmp and did not survive a reboot, and after the P19
+    # recovery the CSVs are the complete record (3,521 scenes per method rather
+    # than the 2,963 / 2,521 available when E9 was first run). The scratch dirs
+    # remain a fallback so the script still works from a fresh harvest.
+    def _from_csv(name: str) -> pd.DataFrame | None:
+        p = REPO / f"rebuttal/method_logs/nutrition5k_{name}_metrics.csv"
+        if not p.exists():
+            return None
+        df = pd.read_csv(p)[["dish_id", "psnr", "ssim", "lpips"]]
+        return df.dropna().reset_index(drop=True)
+
+    nerfacto = _from_csv("nerfacto")
+    if nerfacto is None:
+        nerfacto = to_df(load_json_dir(
+            str(SCRATCH / "output_json_nerfacto/json/*.json"),
+            "psnr", "ssim", "lpips"))
+    bionerf = _from_csv("bionerf")
+    if bionerf is None:
+        bio = {}
+        for d in ("output_json_bionerf/DISH", "output_json5/DISH", "output_json6/DISH"):
+            for k, v in load_json_dir(str(SCRATCH / d / "*.json"),
+                                      "fine_psnr", "fine_ssim", "fine_lpips").items():
+                bio.setdefault(k, v)
+        bionerf = to_df(bio)
     i4 = common & set(nerfacto["dish_id"])
     i5 = i4 & set(bionerf["dish_id"])
     print(f"I4={len(i4)}, I5={len(i5)} (nerfacto logs {len(nerfacto)}, bionerf {len(bionerf)})")

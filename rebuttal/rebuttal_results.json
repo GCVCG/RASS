@@ -3524,105 +3524,105 @@
   "E9": {
     "description": "Deadline-ready multi-method comparison on AVAILABLE data (common-coverage subpopulations, 2026-07-24 log state: nerfacto 2,950 scenes incl. 188 local GPU evals, bionerf 2,620). Proportional-allocation audit makes the balanced sampler unbiased on regime-skewed coverage; equal-allocation results (0/400, E8) stand as the contrast demonstrating the audit detects population shift.",
     "populations": {
-      "I4": 2915,
-      "I5": 2228
+      "I4": 3473,
+      "I5": 3473
     },
-    "caveat": "I4/I5 are not random subsamples of the audit set (missingness concentrated in regimes 0/1/2/4); all claims are for the common-coverage subpopulation. dish_1551323219 evaluated at 28k/30k steps (flagged).",
+    "caveat": "SUPERSEDED BY P19 RECOVERY. I4 = I5 = 3,473 is now the FULL cross-method intersection (identical to E1's population), not a common-coverage subpopulation: nerfacto and BioNeRF each cover 3,521 of 3,522 scenes after the P19 recovery. The earlier restriction (I4 = 2,915, I5 = 2,228) and its 'common-coverage subpopulation' caveat no longer apply and must not be repeated. Remaining minor flags: dish_1551323219 evaluated at 28k/30k steps; dish_1563900172 excluded for both methods (corrupt source image).",
     "a_method_table_I5": {
       "zipnerf": {
         "psnr": {
-          "mean": 19.81516432612332,
-          "std": 6.376875061716939
+          "mean": 18.834780663123162,
+          "std": 6.2657214487100985
         },
         "ssim": {
-          "mean": 0.7034709854536361,
-          "std": 0.16602589167657056
+          "mean": 0.6802623921706564,
+          "std": 0.16835256937408347
         },
         "lpips": {
-          "mean": 0.30831138594527496,
-          "std": 0.22316070659546797
+          "mean": 0.34048085777625864,
+          "std": 0.22410171754784022
         }
       },
       "feature_splatting": {
         "psnr": {
-          "mean": 18.070867212285258,
-          "std": 4.878499202537342
+          "mean": 17.274638739299473,
+          "std": 4.816279969451482
         },
         "ssim": {
-          "mean": 0.6725841762641817,
-          "std": 0.17083657301081442
+          "mean": 0.6603817497357284,
+          "std": 0.16296259594426227
         },
         "lpips": {
-          "mean": 0.40652184365099864,
-          "std": 0.1540001501481659
+          "mean": 0.43563607212272976,
+          "std": 0.15680308965439094
         }
       },
       "instant_ngp_fi": {
         "psnr": {
-          "mean": 17.217265668852782,
-          "std": 4.492120596760133
+          "mean": 16.52778126435934,
+          "std": 4.423852867244074
         },
         "ssim": {
-          "mean": 0.7521396983474732,
-          "std": 0.09388071183513931
+          "mean": 0.7433583160430377,
+          "std": 0.09723742918461814
         }
       },
       "nerfacto": {
         "psnr": {
-          "mean": 15.506382269748023,
-          "std": 4.58636189097288
+          "mean": 14.65231384326222,
+          "std": 4.50857792685465
         },
         "ssim": {
-          "mean": 0.6383930966993744,
-          "std": 0.13611855646749632
+          "mean": 0.6192374019235964,
+          "std": 0.1347764836527449
         },
         "lpips": {
-          "mean": 0.5745043067572575,
-          "std": 0.13350956662773733
+          "mean": 0.5972152347098569,
+          "std": 0.1339880342224335
         }
       },
       "bionerf": {
         "psnr": {
-          "mean": 8.668622223757328,
-          "std": 1.8493325607777569
+          "mean": 8.61364415403817,
+          "std": 1.9322627404741526
         },
         "ssim": {
-          "mean": 0.45363866748485576,
-          "std": 0.12308853120753678
+          "mean": 0.456924927297292,
+          "std": 0.13182107740361682
         },
         "lpips": {
-          "mean": 0.8869522007807581,
-          "std": 0.08970497777975121
+          "mean": 0.8816679454642691,
+          "std": 0.09289073173240998
         }
       }
     },
     "a_pairwise_gaps_I5": {
-      "zipnerf_minus_feature_splatting_psnr": 1.744297113838062,
-      "zipnerf_minus_instant_ngp_fi_psnr": 2.5978986572705374,
-      "zipnerf_minus_nerfacto_psnr": 4.308782056375296,
-      "zipnerf_minus_bionerf_psnr": 11.146542102365991,
-      "feature_splatting_minus_instant_ngp_fi_psnr": 0.8536015434324753,
-      "feature_splatting_minus_nerfacto_psnr": 2.5644849425372342,
-      "feature_splatting_minus_bionerf_psnr": 9.40224498852793,
-      "instant_ngp_fi_minus_nerfacto_psnr": 1.710883399104759,
-      "instant_ngp_fi_minus_bionerf_psnr": 8.548643445095454,
-      "nerfacto_minus_bionerf_psnr": 6.837760045990695,
-      "zipnerf_minus_feature_splatting_ssim": 0.03088680918945441,
-      "zipnerf_minus_instant_ngp_fi_ssim": -0.04866871289383712,
-      "zipnerf_minus_nerfacto_ssim": 0.06507788875426168,
-      "zipnerf_minus_bionerf_ssim": 0.2498323179687803,
-      "feature_splatting_minus_instant_ngp_fi_ssim": -0.07955552208329153,
-      "feature_splatting_minus_nerfacto_ssim": 0.03419107956480727,
-      "feature_splatting_minus_bionerf_ssim": 0.2189455087793259,
-      "instant_ngp_fi_minus_nerfacto_ssim": 0.1137466016480988,
-      "instant_ngp_fi_minus_bionerf_ssim": 0.2985010308626174,
-      "nerfacto_minus_bionerf_ssim": 0.18475442921451862,
-      "zipnerf_minus_feature_splatting_lpips": -0.09821045770572367,
-      "zipnerf_minus_nerfacto_lpips": -0.26619292081198254,
-      "zipnerf_minus_bionerf_lpips": -0.5786408148354831,
-      "feature_splatting_minus_nerfacto_lpips": -0.16798246310625886,
-      "feature_splatting_minus_bionerf_lpips": -0.48043035712975946,
-      "nerfacto_minus_bionerf_lpips": -0.3124478940235006
+      "zipnerf_minus_feature_splatting_psnr": 1.5601419238236893,
+      "zipnerf_minus_instant_ngp_fi_psnr": 2.3069993987638213,
+      "zipnerf_minus_nerfacto_psnr": 4.182466819860942,
+      "zipnerf_minus_bionerf_psnr": 10.221136509084992,
+      "feature_splatting_minus_instant_ngp_fi_psnr": 0.746857474940132,
+      "feature_splatting_minus_nerfacto_psnr": 2.6223248960372523,
+      "feature_splatting_minus_bionerf_psnr": 8.660994585261303,
+      "instant_ngp_fi_minus_nerfacto_psnr": 1.8754674210971203,
+      "instant_ngp_fi_minus_bionerf_psnr": 7.914137110321171,
+      "nerfacto_minus_bionerf_psnr": 6.038669689224051,
+      "zipnerf_minus_feature_splatting_ssim": 0.019880642434928042,
+      "zipnerf_minus_instant_ngp_fi_ssim": -0.06309592387238128,
+      "zipnerf_minus_nerfacto_ssim": 0.061024990247059985,
+      "zipnerf_minus_bionerf_ssim": 0.22333746487336442,
+      "feature_splatting_minus_instant_ngp_fi_ssim": -0.08297656630730932,
+      "feature_splatting_minus_nerfacto_ssim": 0.04114434781213194,
+      "feature_splatting_minus_bionerf_ssim": 0.20345682243843638,
+      "instant_ngp_fi_minus_nerfacto_ssim": 0.12412091411944126,
+      "instant_ngp_fi_minus_bionerf_ssim": 0.2864333887457457,
+      "nerfacto_minus_bionerf_ssim": 0.16231247462630444,
+      "zipnerf_minus_feature_splatting_lpips": -0.09515521434647112,
+      "zipnerf_minus_nerfacto_lpips": -0.2567343769335983,
+      "zipnerf_minus_bionerf_lpips": -0.5411870876880105,
+      "feature_splatting_minus_nerfacto_lpips": -0.16157916258712718,
+      "feature_splatting_minus_bionerf_lpips": -0.4460318733415393,
+      "nerfacto_minus_bionerf_lpips": -0.28445271075441214
     },
     "a_orderings_I5": {
       "psnr": [
@@ -3648,25 +3648,25 @@
     },
     "b_proportional_frontiers": {
       "I4_4methods": {
-        "population": 2915,
+        "population": 3473,
         "regime_sizes": {
-          "0": 535,
-          "1": 310,
-          "2": 345,
-          "3": 695,
-          "4": 422,
-          "5": 608
+          "0": 724,
+          "1": 417,
+          "2": 457,
+          "3": 715,
+          "4": 528,
+          "5": 632
         },
         "frontier": [
           {
             "budget_scenes": 24,
             "allocation": {
-              "0": 4,
+              "0": 5,
               "1": 3,
               "2": 3,
-              "3": 6,
-              "4": 3,
-              "5": 5
+              "3": 5,
+              "4": 4,
+              "5": 4
             },
             "n_pass": 0,
             "empirical_pass_rate": 0.0,
@@ -3676,116 +3676,116 @@
           {
             "budget_scenes": 36,
             "allocation": {
-              "0": 7,
+              "0": 8,
               "1": 4,
-              "2": 4,
-              "3": 9,
+              "2": 5,
+              "3": 7,
               "4": 5,
               "5": 7
             },
-            "n_pass": 6,
-            "empirical_pass_rate": 0.015,
-            "wilson_lcb_95": 0.006892291919440893,
+            "n_pass": 4,
+            "empirical_pass_rate": 0.01,
+            "wilson_lcb_95": 0.0038954837949909914,
             "rng_seed_effective": 36
           },
           {
             "budget_scenes": 48,
             "allocation": {
-              "0": 9,
-              "1": 5,
+              "0": 10,
+              "1": 6,
               "2": 6,
-              "3": 11,
+              "3": 10,
               "4": 7,
-              "5": 10
+              "5": 9
             },
-            "n_pass": 18,
-            "empirical_pass_rate": 0.045,
-            "wilson_lcb_95": 0.028651458653886002,
+            "n_pass": 10,
+            "empirical_pass_rate": 0.025,
+            "wilson_lcb_95": 0.013635091745936023,
             "rng_seed_effective": 48
           },
           {
             "budget_scenes": 60,
             "allocation": {
-              "0": 11,
-              "1": 6,
-              "2": 7,
-              "3": 14,
+              "0": 13,
+              "1": 7,
+              "2": 8,
+              "3": 12,
               "4": 9,
-              "5": 13
+              "5": 11
             },
-            "n_pass": 28,
-            "empirical_pass_rate": 0.07,
-            "wilson_lcb_95": 0.0488716266997445,
+            "n_pass": 24,
+            "empirical_pass_rate": 0.06,
+            "wilson_lcb_95": 0.0406479701137247,
             "rng_seed_effective": 60
           },
           {
             "budget_scenes": 72,
             "allocation": {
-              "0": 13,
-              "1": 8,
+              "0": 15,
+              "1": 9,
               "2": 9,
-              "3": 17,
-              "4": 10,
-              "5": 15
+              "3": 15,
+              "4": 11,
+              "5": 13
             },
-            "n_pass": 54,
-            "empirical_pass_rate": 0.135,
-            "wilson_lcb_95": 0.10496299061600528,
+            "n_pass": 38,
+            "empirical_pass_rate": 0.095,
+            "wilson_lcb_95": 0.06999661149327467,
             "rng_seed_effective": 72
           },
           {
             "budget_scenes": 96,
             "allocation": {
-              "0": 18,
-              "1": 10,
-              "2": 11,
-              "3": 23,
-              "4": 14,
-              "5": 20
+              "0": 20,
+              "1": 11,
+              "2": 13,
+              "3": 20,
+              "4": 15,
+              "5": 17
             },
-            "n_pass": 72,
-            "empirical_pass_rate": 0.18,
-            "wilson_lcb_95": 0.14545031532583305,
+            "n_pass": 57,
+            "empirical_pass_rate": 0.1425,
+            "wilson_lcb_95": 0.1116383145426319,
             "rng_seed_effective": 96
           },
           {
             "budget_scenes": 120,
             "allocation": {
-              "0": 22,
-              "1": 13,
-              "2": 14,
-              "3": 29,
-              "4": 17,
-              "5": 25
+              "0": 25,
+              "1": 14,
+              "2": 16,
+              "3": 25,
+              "4": 18,
+              "5": 22
             },
-            "n_pass": 106,
-            "empirical_pass_rate": 0.265,
-            "wilson_lcb_95": 0.22413371758035427,
+            "n_pass": 96,
+            "empirical_pass_rate": 0.24,
+            "wilson_lcb_95": 0.20074599691279923,
             "rng_seed_effective": 120
           }
         ],
-        "budget_p008": 72
+        "budget_p008": 96
       },
       "I5_5methods": {
-        "population": 2228,
+        "population": 3473,
         "regime_sizes": {
-          "0": 388,
-          "1": 216,
-          "2": 228,
-          "3": 579,
-          "4": 314,
-          "5": 503
+          "0": 724,
+          "1": 417,
+          "2": 457,
+          "3": 715,
+          "4": 528,
+          "5": 632
         },
         "frontier": [
           {
             "budget_scenes": 24,
             "allocation": {
-              "0": 4,
-              "1": 2,
+              "0": 5,
+              "1": 3,
               "2": 3,
-              "3": 6,
-              "4": 3,
-              "5": 6
+              "3": 5,
+              "4": 4,
+              "5": 4
             },
             "n_pass": 0,
             "empirical_pass_rate": 0.0,
@@ -3795,27 +3795,27 @@
           {
             "budget_scenes": 36,
             "allocation": {
-              "0": 6,
+              "0": 8,
               "1": 4,
-              "2": 4,
-              "3": 9,
+              "2": 5,
+              "3": 7,
               "4": 5,
-              "5": 8
+              "5": 7
             },
-            "n_pass": 0,
-            "empirical_pass_rate": 0.0,
-            "wilson_lcb_95": 0.0,
+            "n_pass": 1,
+            "empirical_pass_rate": 0.0025,
+            "wilson_lcb_95": 0.0004414477868016353,
             "rng_seed_effective": 36
           },
           {
             "budget_scenes": 48,
             "allocation": {
-              "0": 8,
-              "1": 5,
-              "2": 5,
-              "3": 12,
+              "0": 10,
+              "1": 6,
+              "2": 6,
+              "3": 10,
               "4": 7,
-              "5": 11
+              "5": 9
             },
             "n_pass": 2,
             "empirical_pass_rate": 0.005,
@@ -3825,61 +3825,61 @@
           {
             "budget_scenes": 60,
             "allocation": {
-              "0": 10,
-              "1": 6,
-              "2": 6,
-              "3": 16,
-              "4": 8,
-              "5": 14
+              "0": 13,
+              "1": 7,
+              "2": 8,
+              "3": 12,
+              "4": 9,
+              "5": 11
             },
-            "n_pass": 7,
-            "empirical_pass_rate": 0.0175,
-            "wilson_lcb_95": 0.008502291107038101,
+            "n_pass": 9,
+            "empirical_pass_rate": 0.0225,
+            "wilson_lcb_95": 0.011881583530495036,
             "rng_seed_effective": 60
           },
           {
             "budget_scenes": 72,
             "allocation": {
-              "0": 13,
-              "1": 7,
-              "2": 7,
-              "3": 19,
-              "4": 10,
-              "5": 16
+              "0": 15,
+              "1": 9,
+              "2": 9,
+              "3": 15,
+              "4": 11,
+              "5": 13
             },
-            "n_pass": 23,
-            "empirical_pass_rate": 0.0575,
-            "wilson_lcb_95": 0.038617542757733075,
+            "n_pass": 16,
+            "empirical_pass_rate": 0.04,
+            "wilson_lcb_95": 0.024769063069711755,
             "rng_seed_effective": 72
           },
           {
             "budget_scenes": 96,
             "allocation": {
-              "0": 17,
-              "1": 9,
-              "2": 10,
-              "3": 25,
-              "4": 13,
-              "5": 22
+              "0": 20,
+              "1": 11,
+              "2": 13,
+              "3": 20,
+              "4": 15,
+              "5": 17
             },
-            "n_pass": 37,
-            "empirical_pass_rate": 0.0925,
-            "wilson_lcb_95": 0.06785393449857381,
+            "n_pass": 35,
+            "empirical_pass_rate": 0.0875,
+            "wilson_lcb_95": 0.06358691021150326,
             "rng_seed_effective": 96
           },
           {
             "budget_scenes": 120,
             "allocation": {
-              "0": 21,
-              "1": 12,
-              "2": 12,
-              "3": 31,
-              "4": 17,
-              "5": 27
+              "0": 25,
+              "1": 14,
+              "2": 16,
+              "3": 25,
+              "4": 18,
+              "5": 22
             },
-            "n_pass": 73,
-            "empirical_pass_rate": 0.1825,
-            "wilson_lcb_95": 0.14772734739355886,
+            "n_pass": 53,
+            "empirical_pass_rate": 0.1325,
+            "wilson_lcb_95": 0.10274521663902704,
             "rng_seed_effective": 120
           }
         ],
@@ -3892,47 +3892,37 @@
       "rass48": {
         "I4": {
           "nominal": 48,
-          "in_intersection": 41,
+          "in_intersection": 48,
           "pass": false,
           "violated": [
-            "zipnerf.ssim",
             "feature_splatting.lpips",
-            "nerfacto.psnr",
             "nerfacto.lpips"
           ]
         },
         "I5": {
           "nominal": 48,
-          "in_intersection": 29,
+          "in_intersection": 48,
           "pass": false,
           "violated": [
-            "zipnerf.psnr",
-            "zipnerf.ssim",
-            "zipnerf.lpips",
             "feature_splatting.lpips",
-            "nerfacto.psnr",
             "nerfacto.lpips",
             "bionerf.psnr",
-            "bionerf.ssim",
-            "bionerf.lpips"
+            "bionerf.ssim"
           ]
         }
       },
       "rass96": {
         "I4": {
           "nominal": 96,
-          "in_intersection": 77,
+          "in_intersection": 94,
           "pass": true,
           "violated": []
         },
         "I5": {
           "nominal": 96,
-          "in_intersection": 64,
+          "in_intersection": 94,
           "pass": false,
           "violated": [
-            "feature_splatting.lpips",
-            "nerfacto.ssim",
-            "bionerf.psnr",
             "bionerf.ssim",
             "bionerf.lpips"
           ]
@@ -3943,100 +3933,98 @@
       "rass48": {
         "I4": {
           "nominal": 48,
-          "in_intersection": 41,
+          "in_intersection": 48,
           "pass": false,
           "violated": [
-            "zipnerf.ssim",
             "feature_splatting.lpips",
-            "nerfacto.psnr",
             "nerfacto.lpips"
           ],
           "constraints": [
             {
               "method": "zipnerf",
               "metric": "psnr",
-              "abs_mean_gap": 0.3292876987842348,
-              "ks": 0.1196000502029034,
+              "abs_mean_gap": 0.14111136409594494,
+              "ks": 0.09017180151646031,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "zipnerf",
               "metric": "ssim",
-              "abs_mean_gap": 0.010184638303866844,
-              "ks": 0.08985482993766473,
-              "mean_pass": false,
+              "abs_mean_gap": 0.005586109650702165,
+              "ks": 0.07328558402917747,
+              "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "zipnerf",
               "metric": "lpips",
-              "abs_mean_gap": 0.0026632125325273814,
-              "ks": 0.13507091160105425,
+              "abs_mean_gap": 0.0006778253250767641,
+              "ks": 0.11161099913619349,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "feature_splatting",
               "metric": "psnr",
-              "abs_mean_gap": 0.22741154164134159,
-              "ks": 0.08815629837258922,
+              "abs_mean_gap": 0.09191256059040853,
+              "ks": 0.07444332469526826,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "feature_splatting",
               "metric": "ssim",
-              "abs_mean_gap": 0.0038325611524530068,
-              "ks": 0.10361042546960633,
+              "abs_mean_gap": 0.007432414682165267,
+              "ks": 0.07978812745944909,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "feature_splatting",
               "metric": "lpips",
-              "abs_mean_gap": 0.02613815152862181,
-              "ks": 0.16863155252478768,
+              "abs_mean_gap": 0.02105688705923464,
+              "ks": 0.16511301468471062,
               "mean_pass": false,
               "ks_pass": false
             },
             {
               "method": "instant_ngp_fi",
               "metric": "psnr",
-              "abs_mean_gap": 0.0993835276963253,
-              "ks": 0.07941262603020541,
+              "abs_mean_gap": 0.08404556549482578,
+              "ks": 0.06788679335828775,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "instant_ngp_fi",
               "metric": "ssim",
-              "abs_mean_gap": 0.003047808924405593,
-              "ks": 0.0959210140986487,
+              "abs_mean_gap": 0.002038382206962286,
+              "ks": 0.07635089739898263,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "nerfacto",
               "metric": "psnr",
-              "abs_mean_gap": 0.3725707552340545,
-              "ks": 0.158080575659959,
+              "abs_mean_gap": 0.052523737259681624,
+              "ks": 0.08267947979652558,
               "mean_pass": true,
-              "ks_pass": false
+              "ks_pass": true
             },
             {
               "method": "nerfacto",
               "metric": "ssim",
-              "abs_mean_gap": 0.008614121794211949,
-              "ks": 0.11156758565870392,
+              "abs_mean_gap": 0.0005424176990393992,
+              "ks": 0.07199587292446492,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "nerfacto",
               "metric": "lpips",
-              "abs_mean_gap": 0.010397137750947083,
-              "ks": 0.10414592310588629,
+              "abs_mean_gap": 0.013428416626574569,
+              "ks": 0.11695580190037431,
               "mean_pass": false,
               "ks_pass": true
             }
@@ -4044,131 +4032,126 @@
         },
         "I5": {
           "nominal": 48,
-          "in_intersection": 29,
+          "in_intersection": 48,
           "pass": false,
           "violated": [
-            "zipnerf.psnr",
-            "zipnerf.ssim",
-            "zipnerf.lpips",
             "feature_splatting.lpips",
-            "nerfacto.psnr",
             "nerfacto.lpips",
             "bionerf.psnr",
-            "bionerf.ssim",
-            "bionerf.lpips"
+            "bionerf.ssim"
           ],
           "constraints": [
             {
               "method": "zipnerf",
               "metric": "psnr",
-              "abs_mean_gap": 0.6606036645151292,
-              "ks": 0.17954869064570048,
-              "mean_pass": false,
-              "ks_pass": false
+              "abs_mean_gap": 0.14111136409594494,
+              "ks": 0.09017180151646031,
+              "mean_pass": true,
+              "ks_pass": true
             },
             {
               "method": "zipnerf",
               "metric": "ssim",
-              "abs_mean_gap": 0.019336912122333905,
-              "ks": 0.14274438184857302,
-              "mean_pass": false,
-              "ks_pass": false
+              "abs_mean_gap": 0.005586109650702165,
+              "ks": 0.07328558402917747,
+              "mean_pass": true,
+              "ks_pass": true
             },
             {
               "method": "zipnerf",
               "metric": "lpips",
-              "abs_mean_gap": 0.016145081973557462,
-              "ks": 0.15187581254256174,
-              "mean_pass": false,
-              "ks_pass": false
+              "abs_mean_gap": 0.0006778253250767641,
+              "ks": 0.11161099913619349,
+              "mean_pass": true,
+              "ks_pass": true
             },
             {
               "method": "feature_splatting",
               "metric": "psnr",
-              "abs_mean_gap": 0.11225177233177774,
-              "ks": 0.07845291896242185,
+              "abs_mean_gap": 0.09191256059040853,
+              "ks": 0.07444332469526826,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "feature_splatting",
               "metric": "ssim",
-              "abs_mean_gap": 0.004104966947993782,
-              "ks": 0.10115767968798366,
+              "abs_mean_gap": 0.007432414682165267,
+              "ks": 0.07978812745944909,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "feature_splatting",
               "metric": "lpips",
-              "abs_mean_gap": 0.02727064364967685,
-              "ks": 0.1510864854825729,
+              "abs_mean_gap": 0.02105688705923464,
+              "ks": 0.16511301468471062,
               "mean_pass": false,
               "ks_pass": false
             },
             {
               "method": "instant_ngp_fi",
               "metric": "psnr",
-              "abs_mean_gap": 0.12243853780238823,
-              "ks": 0.10516622299263295,
+              "abs_mean_gap": 0.08404556549482578,
+              "ks": 0.06788679335828775,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "instant_ngp_fi",
               "metric": "ssim",
-              "abs_mean_gap": 0.001213082690457945,
-              "ks": 0.09205720299634743,
+              "abs_mean_gap": 0.002038382206962286,
+              "ks": 0.07635089739898263,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "nerfacto",
               "metric": "psnr",
-              "abs_mean_gap": 0.585503428504687,
-              "ks": 0.14542190305206462,
-              "mean_pass": false,
-              "ks_pass": false
+              "abs_mean_gap": 0.052523737259681624,
+              "ks": 0.08267947979652558,
+              "mean_pass": true,
+              "ks_pass": true
             },
             {
               "method": "nerfacto",
               "metric": "ssim",
-              "abs_mean_gap": 0.008847827724764223,
-              "ks": 0.0947811552033678,
+              "abs_mean_gap": 0.0005424176990393992,
+              "ks": 0.07199587292446492,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "nerfacto",
               "metric": "lpips",
-              "abs_mean_gap": 0.01685576896316776,
-              "ks": 0.16560391258589735,
+              "abs_mean_gap": 0.013428416626574569,
+              "ks": 0.11695580190037431,
               "mean_pass": false,
-              "ks_pass": false
+              "ks_pass": true
             },
             {
               "method": "bionerf",
               "metric": "psnr",
-              "abs_mean_gap": 0.46482272674105474,
-              "ks": 0.14166099176623537,
+              "abs_mean_gap": 0.3972384322025988,
+              "ks": 0.14703906324983204,
               "mean_pass": true,
               "ks_pass": false
             },
             {
               "method": "bionerf",
               "metric": "ssim",
-              "abs_mean_gap": 0.006485800856192492,
-              "ks": 0.16625394663529994,
+              "abs_mean_gap": 0.00918647053906535,
+              "ks": 0.15439341587484404,
               "mean_pass": true,
               "ks_pass": false
             },
             {
               "method": "bionerf",
               "metric": "lpips",
-              "abs_mean_gap": 0.014178289481174833,
-              "ks": 0.15021977341670278,
-              "mean_pass": false,
-              "ks_pass": false
+              "abs_mean_gap": 0.0001869978459519972,
+              "ks": 0.06950643055955466,
+              "mean_pass": true,
+              "ks_pass": true
             }
           ]
         }
@@ -4176,95 +4159,95 @@
       "rass96": {
         "I4": {
           "nominal": 96,
-          "in_intersection": 77,
+          "in_intersection": 94,
           "pass": true,
           "violated": [],
           "constraints": [
             {
               "method": "zipnerf",
               "metric": "psnr",
-              "abs_mean_gap": 0.06330479809067668,
-              "ks": 0.06782651310953197,
+              "abs_mean_gap": 0.07634304888897248,
+              "ks": 0.04490568580723024,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "zipnerf",
               "metric": "ssim",
-              "abs_mean_gap": 0.002186911158980953,
-              "ks": 0.06571918647390346,
+              "abs_mean_gap": 0.003428477891177284,
+              "ks": 0.04880506766484308,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "zipnerf",
               "metric": "lpips",
-              "abs_mean_gap": 0.003604073144625075,
-              "ks": 0.0503308012741975,
+              "abs_mean_gap": 0.002220828432727029,
+              "ks": 0.04991086251998701,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "feature_splatting",
               "metric": "psnr",
-              "abs_mean_gap": 0.2187872660215575,
-              "ks": 0.06052438127909826,
+              "abs_mean_gap": 0.32626892684135456,
+              "ks": 0.06813963033982516,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "feature_splatting",
               "metric": "ssim",
-              "abs_mean_gap": 0.003419491703444244,
-              "ks": 0.06297476108796864,
+              "abs_mean_gap": 0.00844794272791849,
+              "ks": 0.06724519239605221,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "feature_splatting",
               "metric": "lpips",
-              "abs_mean_gap": 0.00473978356717264,
-              "ks": 0.06380789022298457,
+              "abs_mean_gap": 0.009950170610119768,
+              "ks": 0.052248041119640265,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "instant_ngp_fi",
               "metric": "psnr",
-              "abs_mean_gap": 0.18313531865464228,
-              "ks": 0.05915216858613085,
+              "abs_mean_gap": 0.0880562038167838,
+              "ks": 0.04296671588117453,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "instant_ngp_fi",
               "metric": "ssim",
-              "abs_mean_gap": 0.00920898383986346,
-              "ks": 0.09438863023768684,
+              "abs_mean_gap": 0.007467583515472831,
+              "ks": 0.08529323474094994,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "nerfacto",
               "metric": "psnr",
-              "abs_mean_gap": 0.06784944536638626,
-              "ks": 0.08620436167605978,
+              "abs_mean_gap": 0.2057343869328747,
+              "ks": 0.09505853667501883,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "nerfacto",
               "metric": "ssim",
-              "abs_mean_gap": 0.007410196753671161,
-              "ks": 0.07223719676549865,
+              "abs_mean_gap": 0.0009962045442593048,
+              "ks": 0.060515465812253796,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "nerfacto",
               "metric": "lpips",
-              "abs_mean_gap": 0.0060996994920233805,
-              "ks": 0.08056848811565792,
+              "abs_mean_gap": 0.0010994300725047923,
+              "ks": 0.07765375449516329,
               "mean_pass": true,
               "ks_pass": true
             }
@@ -4272,12 +4255,9 @@
         },
         "I5": {
           "nominal": 96,
-          "in_intersection": 64,
+          "in_intersection": 94,
           "pass": false,
           "violated": [
-            "feature_splatting.lpips",
-            "nerfacto.ssim",
-            "bionerf.psnr",
             "bionerf.ssim",
             "bionerf.lpips"
           ],
@@ -4285,146 +4265,146 @@
             {
               "method": "zipnerf",
               "metric": "psnr",
-              "abs_mean_gap": 0.014860777548829418,
-              "ks": 0.0653052064631957,
+              "abs_mean_gap": 0.07634304888897248,
+              "ks": 0.04490568580723024,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "zipnerf",
               "metric": "ssim",
-              "abs_mean_gap": 0.0018529626055945325,
-              "ks": 0.09038375224416517,
+              "abs_mean_gap": 0.003428477891177284,
+              "ks": 0.04880506766484308,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "zipnerf",
               "metric": "lpips",
-              "abs_mean_gap": 0.00433954075691545,
-              "ks": 0.0626963644524237,
+              "abs_mean_gap": 0.002220828432727029,
+              "ks": 0.04991086251998701,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "feature_splatting",
               "metric": "psnr",
-              "abs_mean_gap": 0.22546777295038822,
-              "ks": 0.07355251346499102,
+              "abs_mean_gap": 0.32626892684135456,
+              "ks": 0.06813963033982516,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "feature_splatting",
               "metric": "ssim",
-              "abs_mean_gap": 0.006242703381404202,
-              "ks": 0.06412701974865351,
+              "abs_mean_gap": 0.00844794272791849,
+              "ks": 0.06724519239605221,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "feature_splatting",
               "metric": "lpips",
-              "abs_mean_gap": 0.012723080676359966,
-              "ks": 0.07686265709156194,
-              "mean_pass": false,
+              "abs_mean_gap": 0.009950170610119768,
+              "ks": 0.052248041119640265,
+              "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "instant_ngp_fi",
               "metric": "psnr",
-              "abs_mean_gap": 0.09815544196215598,
-              "ks": 0.05641270197486535,
+              "abs_mean_gap": 0.0880562038167838,
+              "ks": 0.04296671588117453,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "instant_ngp_fi",
               "metric": "ssim",
-              "abs_mean_gap": 0.009534064288464372,
-              "ks": 0.10704667863554758,
+              "abs_mean_gap": 0.007467583515472831,
+              "ks": 0.08529323474094994,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "nerfacto",
               "metric": "psnr",
-              "abs_mean_gap": 0.030132157691291184,
-              "ks": 0.08586736983842011,
+              "abs_mean_gap": 0.2057343869328747,
+              "ks": 0.09505853667501883,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "nerfacto",
               "metric": "ssim",
-              "abs_mean_gap": 0.010321703200233512,
-              "ks": 0.10154847396768402,
-              "mean_pass": false,
+              "abs_mean_gap": 0.0009962045442593048,
+              "ks": 0.060515465812253796,
+              "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "nerfacto",
               "metric": "lpips",
-              "abs_mean_gap": 0.006381861151562251,
-              "ks": 0.08844815978456014,
+              "abs_mean_gap": 0.0010994300725047923,
+              "ks": 0.07765375449516329,
               "mean_pass": true,
               "ks_pass": true
             },
             {
               "method": "bionerf",
               "metric": "psnr",
-              "abs_mean_gap": 0.41894643930333686,
-              "ks": 0.1596442998204668,
+              "abs_mean_gap": 0.14204856891140594,
+              "ks": 0.1250497760841997,
               "mean_pass": true,
-              "ks_pass": false
+              "ks_pass": true
             },
             {
               "method": "bionerf",
               "metric": "ssim",
-              "abs_mean_gap": 0.026206238184013853,
-              "ks": 0.13226548473967684,
+              "abs_mean_gap": 0.011508148306994592,
+              "ks": 0.09038724261935539,
               "mean_pass": false,
               "ks_pass": true
             },
             {
               "method": "bionerf",
               "metric": "lpips",
-              "abs_mean_gap": 0.027665492489138077,
-              "ks": 0.1602894973070018,
+              "abs_mean_gap": 0.011194518439975654,
+              "ks": 0.10551610907241885,
               "mean_pass": false,
-              "ks_pass": false
+              "ks_pass": true
             }
           ]
         }
       }
     },
     "d_kendall_tau_I5": {
-      "zipnerf_vs_feature_splatting_psnr": 0.586090085848639,
-      "zipnerf_vs_instant_ngp_fi_psnr": 0.6458777900404614,
-      "zipnerf_vs_nerfacto_psnr": 0.6173911010537398,
-      "zipnerf_vs_bionerf_psnr": 0.14387083927545005,
-      "feature_splatting_vs_instant_ngp_fi_psnr": 0.6013096976151184,
-      "feature_splatting_vs_nerfacto_psnr": 0.727132894080241,
-      "feature_splatting_vs_bionerf_psnr": 0.16696750102181565,
-      "instant_ngp_fi_vs_nerfacto_psnr": 0.6290845418436537,
-      "instant_ngp_fi_vs_bionerf_psnr": 0.13267238453483,
-      "nerfacto_vs_bionerf_psnr": 0.17444630489689536,
-      "zipnerf_vs_feature_splatting_ssim": 0.5824088452573855,
-      "zipnerf_vs_instant_ngp_fi_ssim": 0.5629995838166246,
-      "zipnerf_vs_nerfacto_ssim": 0.6109140818117906,
-      "zipnerf_vs_bionerf_ssim": -0.06535469808565851,
-      "feature_splatting_vs_instant_ngp_fi_ssim": 0.5711816542369273,
-      "feature_splatting_vs_nerfacto_ssim": 0.7236510622448987,
-      "feature_splatting_vs_bionerf_ssim": -0.09109355639414755,
-      "instant_ngp_fi_vs_nerfacto_ssim": 0.6678038984585295,
-      "instant_ngp_fi_vs_bionerf_ssim": 0.007538460174180269,
-      "nerfacto_vs_bionerf_ssim": -0.040209957926185806,
-      "zipnerf_vs_feature_splatting_lpips": 0.49483690854608725,
-      "zipnerf_vs_nerfacto_lpips": 0.5198836863400779,
-      "zipnerf_vs_bionerf_lpips": -0.15733511926130597,
-      "feature_splatting_vs_nerfacto_lpips": 0.6185116720773854,
-      "feature_splatting_vs_bionerf_lpips": -0.16964205997359275,
-      "nerfacto_vs_bionerf_lpips": -0.08972675584618608
+      "zipnerf_vs_feature_splatting_psnr": 0.5490544940465274,
+      "zipnerf_vs_instant_ngp_fi_psnr": 0.6186895714752817,
+      "zipnerf_vs_nerfacto_psnr": 0.5765979054679139,
+      "zipnerf_vs_bionerf_psnr": 0.14946143944222975,
+      "feature_splatting_vs_instant_ngp_fi_psnr": 0.5599568096710529,
+      "feature_splatting_vs_nerfacto_psnr": 0.7164059807990484,
+      "feature_splatting_vs_bionerf_psnr": 0.16500646237784874,
+      "instant_ngp_fi_vs_nerfacto_psnr": 0.5890782215935704,
+      "instant_ngp_fi_vs_bionerf_psnr": 0.13559008864963554,
+      "nerfacto_vs_bionerf_psnr": 0.1892111097989626,
+      "zipnerf_vs_feature_splatting_ssim": 0.5517708822711099,
+      "zipnerf_vs_instant_ngp_fi_ssim": 0.5506529759073782,
+      "zipnerf_vs_nerfacto_ssim": 0.5944198393548672,
+      "zipnerf_vs_bionerf_ssim": -0.049677337226655266,
+      "feature_splatting_vs_instant_ngp_fi_ssim": 0.5416182904061748,
+      "feature_splatting_vs_nerfacto_ssim": 0.6900218406376509,
+      "feature_splatting_vs_bionerf_ssim": -0.0628734370874196,
+      "instant_ngp_fi_vs_nerfacto_ssim": 0.639549201808288,
+      "instant_ngp_fi_vs_bionerf_ssim": 0.03648255601805103,
+      "nerfacto_vs_bionerf_ssim": -0.007232555022882246,
+      "zipnerf_vs_feature_splatting_lpips": 0.4453733977262894,
+      "zipnerf_vs_nerfacto_lpips": 0.47221820468896986,
+      "zipnerf_vs_bionerf_lpips": -0.13723795644361178,
+      "feature_splatting_vs_nerfacto_lpips": 0.6000654323531908,
+      "feature_splatting_vs_bionerf_lpips": -0.1653891459558174,
+      "nerfacto_vs_bionerf_lpips": -0.046449680563180856
     },
     "thresholds": {
       "psnr_tol": 0.5,
@@ -4433,7 +4413,29 @@
       "ks_tol": 0.14
     },
     "num_trials": 400,
-    "seed": 0
+    "seed": 0,
+    "p19_recovery_effect": {
+      "populations_before": {
+        "I4": 2915,
+        "I5": 2228
+      },
+      "populations_after": {
+        "I4": 3473,
+        "I5": 3473
+      },
+      "frontier_before": {
+        "4method_72_scenes_LCB": 0.105,
+        "5method_120_scenes_LCB": 0.148
+      },
+      "frontier_after": {
+        "4method_72_scenes_LCB": 0.07,
+        "4method_96_scenes_LCB": 0.1116,
+        "4method_120_scenes_LCB": 0.2007,
+        "5method_120_scenes_LCB": 0.1027
+      },
+      "interpretation": "The frontier moved UNFAVOURABLY once coverage was completed: the 4-method 0.08 target now needs 96 scenes rather than 72, and the 5-method LCB at 120 falls from 0.148 to 0.1027. This is the direct confirmation of E18's prediction - the previously covered scenes were systematically easier, so the old E9 numbers were flattered by the missingness. The completed audit is harder but valid for the whole benchmark rather than for a subpopulation. Report the new numbers.",
+      "rass96": "PASSES the 4-method joint event on the full I4 (94/96 scenes in intersection, no violations); FAILS the 5-method event on I5 (bionerf.ssim, bionerf.lpips). RASS-48 fails both."
+    }
   },
   "E10": {
     "description": "E1's three-method joint event under proportional-to-regime-size allocation (largest-remainder, min 1/regime), everything else identical, for symmetric allocation reporting. Equal-allocation evaluator validated to reproduce E1's frontier exactly.",
@@ -6219,108 +6221,95 @@
     "population": 3521,
     "results": {
       "nerfacto": {
-        "n_covered": 2963,
-        "n_missing": 558,
+        "n_covered": 3521,
+        "n_missing": 0,
         "metrics": {
           "psnr": {
-            "covered_mean": 19.41292272706793,
-            "missing_mean": 15.688759131243586,
-            "gap": -3.7241635958243435,
-            "ks_missing_vs_covered": 0.3167391859214663,
+            "covered_mean": 18.822725826622037,
+            "missing_mean": NaN,
+            "gap": NaN,
+            "ks_missing_vs_covered": NaN,
             "tolerance": 0.5,
-            "gap_exceeds_tolerance": true,
-            "ks_exceeds_guardrail": true
+            "gap_exceeds_tolerance": false,
+            "ks_exceeds_guardrail": false
           },
           "ssim": {
-            "covered_mean": 0.6934762665881846,
-            "missing_mean": 0.6080033060790816,
-            "gap": -0.08547296050910302,
-            "ks_missing_vs_covered": 0.28721495820011933,
+            "covered_mean": 0.6799307079502751,
+            "missing_mean": NaN,
+            "gap": NaN,
+            "ks_missing_vs_covered": NaN,
             "tolerance": 0.01,
-            "gap_exceeds_tolerance": true,
-            "ks_exceeds_guardrail": true
+            "gap_exceeds_tolerance": false,
+            "ks_exceeds_guardrail": false
           },
           "lpips": {
-            "covered_mean": 0.3231036414367462,
-            "missing_mean": 0.4367429443625033,
-            "gap": 0.11363930292575714,
-            "ks_missing_vs_covered": 0.3078729661040527,
+            "covered_mean": 0.3411129373846509,
+            "missing_mean": NaN,
+            "gap": NaN,
+            "ks_missing_vs_covered": NaN,
             "tolerance": 0.01,
-            "gap_exceeds_tolerance": true,
-            "ks_exceeds_guardrail": true
+            "gap_exceeds_tolerance": false,
+            "ks_exceeds_guardrail": false
           }
         },
         "regime_share_covered": {
-          "0": 0.1832602092473844,
-          "1": 0.10664866689166386,
-          "2": 0.11913601079986501,
-          "3": 0.23759703003712454,
-          "4": 0.1461356733040837,
-          "5": 0.20722240971987851
+          "0": 0.20903152513490486,
+          "1": 0.1198523146833286,
+          "2": 0.13149673388241978,
+          "3": 0.20562340244248792,
+          "4": 0.1525134904856575,
+          "5": 0.18148253337120138
         },
-        "regime_share_missing": {
-          "0": 0.34587813620071683,
-          "1": 0.18996415770609318,
-          "2": 0.1971326164874552,
-          "3": 0.035842293906810034,
-          "4": 0.1863799283154122,
-          "5": 0.044802867383512544
-        },
-        "max_regime_share_shift": 0.2017547361303145,
+        "regime_share_missing": {},
+        "max_regime_share_shift": NaN,
         "verdict": "NOT missing at random: missing scenes are systematically harder (lower PSNR/SSIM, higher LPIPS) and drawn from different regimes"
       },
       "bionerf": {
-        "n_covered": 2521,
-        "n_missing": 1000,
+        "n_covered": 3521,
+        "n_missing": 0,
         "metrics": {
           "psnr": {
-            "covered_mean": 19.44249763171004,
-            "missing_mean": 17.260281105995183,
-            "gap": -2.182216525714857,
-            "ks_missing_vs_covered": 0.1779547798492661,
+            "covered_mean": 18.822725826622037,
+            "missing_mean": NaN,
+            "gap": NaN,
+            "ks_missing_vs_covered": NaN,
             "tolerance": 0.5,
-            "gap_exceeds_tolerance": true,
-            "ks_exceeds_guardrail": true
+            "gap_exceeds_tolerance": false,
+            "ks_exceeds_guardrail": false
           },
           "ssim": {
-            "covered_mean": 0.6948861182267966,
-            "missing_mean": 0.6422281186431644,
-            "gap": -0.052657999583632153,
-            "ks_missing_vs_covered": 0.15865132883776278,
+            "covered_mean": 0.6799307079502751,
+            "missing_mean": NaN,
+            "gap": NaN,
+            "ks_missing_vs_covered": NaN,
             "tolerance": 0.01,
-            "gap_exceeds_tolerance": true,
-            "ks_exceeds_guardrail": true
+            "gap_exceeds_tolerance": false,
+            "ks_exceeds_guardrail": false
           },
           "lpips": {
-            "covered_mean": 0.3204636115703447,
-            "missing_mean": 0.3931698877625167,
-            "gap": 0.07270627619217201,
-            "ks_missing_vs_covered": 0.17180126933756448,
+            "covered_mean": 0.3411129373846509,
+            "missing_mean": NaN,
+            "gap": NaN,
+            "ks_missing_vs_covered": NaN,
             "tolerance": 0.01,
-            "gap_exceeds_tolerance": true,
-            "ks_exceeds_guardrail": true
+            "gap_exceeds_tolerance": false,
+            "ks_exceeds_guardrail": false
           }
         },
         "regime_share_covered": {
-          "0": 0.18683062276874257,
-          "1": 0.11106703689012297,
-          "2": 0.10908369694565649,
-          "3": 0.23839746132487108,
-          "4": 0.14518048393494645,
-          "5": 0.20944069813566046
+          "0": 0.20903152513490486,
+          "1": 0.1198523146833286,
+          "2": 0.13149673388241978,
+          "3": 0.20562340244248792,
+          "4": 0.1525134904856575,
+          "5": 0.18148253337120138
         },
-        "regime_share_missing": {
-          "0": 0.265,
-          "1": 0.142,
-          "2": 0.188,
-          "3": 0.123,
-          "4": 0.171,
-          "5": 0.111
-        },
-        "max_regime_share_shift": 0.11539746132487108,
+        "regime_share_missing": {},
+        "max_regime_share_shift": NaN,
         "verdict": "NOT missing at random: missing scenes are systematically harder (lower PSNR/SSIM, higher LPIPS) and drawn from different regimes"
       }
     },
-    "implication": "E9's I4/I5 multi-method results are computed on a subpopulation biased toward EASIER scenes. The audit remains internally valid (subset vs its own population) but the subpopulation is not representative of the full benchmark; every use of E9 must say so. This also quantifies the population shift E8 detected qualitatively."
+    "implication": "E9's I4/I5 multi-method results are computed on a subpopulation biased toward EASIER scenes. The audit remains internally valid (subset vs its own population) but the subpopulation is not representative of the full benchmark; every use of E9 must say so. This also quantifies the population shift E8 detected qualitatively.",
+    "status": "COMPLETE. Both methods now cover 3,521 of 3,522 scenes, so there are zero missing scenes and the coverage-bias statistics are undefined by construction (reported as nan). The original finding - nerfacto missing scenes averaging 15.73 vs 19.40 dB with KS 0.317, BioNeRF -2.18 dB with KS 0.178 - described a gap that no longer exists. E9's 'common-coverage subpopulation' caveat is withdrawn. E18 is retained as the record of why the recovery was necessary and as the quantitative explanation for E8's 0/400 stress-test result."
   }
 }

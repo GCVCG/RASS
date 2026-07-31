@@ -35,9 +35,25 @@ K6 = REPO / "sweep_cluster_k/k_6/clustered_scenes_k6_dish_cluster_mapping.csv"
 PRIORITY = {0: 0, 1: 0, 2: 0, 4: 0, 3: 1, 5: 1}
 
 
+# the committed metrics CSV is the durable record of which scenes already
+# have logs; the scratch JSON dir lives in /tmp and does not survive a reboot
+DONE_CSV = REPO / "rebuttal/method_logs/nutrition5k_nerfacto_metrics.csv"
+# scenes whose original 30k checkpoint survived on the cluster: the eval sweep
+# was killed by the Slurm wall clock, so training finished but ns-eval never
+# ran. Those are recovered by eval alone - retraining them here would burn a
+# GPU-half-hour each to reproduce a checkpoint we already have, and would give
+# metrics from a *different* training run than the rest of the table.
+RECOVERABLE = SCRATCH / "nerfacto_needs_training.txt"
+
+
 def missing_scenes() -> list[str]:
     mapping = pd.read_csv(K6)
     have = {p.stem for p in OUT_JSON.glob("*.json")}
+    if DONE_CSV.exists():
+        have |= set(pd.read_csv(DONE_CSV)["dish_id"].astype(str))
+    if RECOVERABLE.exists():
+        need = {s for s in RECOVERABLE.read_text().split() if s}
+        have |= set(mapping["dish_id"].astype(str)) - need
     rows = mapping[~mapping["dish_id"].isin(have)].copy()
     rows["prio"] = rows["cluster"].map(PRIORITY)
     rows = rows.sort_values(["prio", "dish_id"], kind="mergesort")

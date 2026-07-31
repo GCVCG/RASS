@@ -34,12 +34,19 @@ path there.
 5. **State the population honestly**: effective Zip-NeRF audit set is
    **3,521** scenes (one descriptor scene has no log entry — documented
    off-by-one vs the stated 3,522; the paper's own exports already use
-   3,521). Cross-method intersection is **3,473**. E9 subpopulations:
-   I4 = 2,915, I5 = 2,228.
-6. **Re-check every "released / ships / we release / audited configuration"
+   3,521). Cross-method intersection is **3,473**.
+6. **E9 coverage is now complete (E19).** nerfacto and BioNeRF each cover
+   3,521 of 3,522 scenes, so **I4 = I5 = 3,473** — the full intersection.
+   Never repeat the withdrawn "common-coverage subpopulation" caveat, the
+   old I4 = 2,915 / I5 = 2,228 sizes, or the superseded 72-scene/LCB-0.105
+   and 120-scene/LCB-0.148 figures. Recovered rows are tagged
+   `recovered-P19` (original cluster weights re-evaluated) vs
+   `retrained-P19` (no checkpoint survived; fresh run). One scene,
+   `dish_1563900172`, is permanently excluded (corrupt source image).
+7. **Re-check every "released / ships / we release / audited configuration"
    phrase you write** against E16's 33-row claims table. A claim without a
    live repository path is a STOP.
-7. Do not quote the deprecated `multi_method_frontier` or
+8. Do not quote the deprecated `multi_method_frontier` or
    `full_budget_sweep` multi-method numbers where they overlap E1 — they
    used a different Instant-NGP PSNR column and are superseded.
 
@@ -57,7 +64,7 @@ path there.
 | rTZt W1 | transfer to another dataset | **E13** |
 | rTZt W2 | multi-method | E1 |
 | rTZt W3 | sensitivity of tolerances | E3 |
-| 6aTr Q2 | more methods | E9 (4- and 5-method) + E3/E6 |
+| 6aTr Q2 | more methods | **E9 on the full intersection** (+ E19) |
 | 6aTr Q3 | ranking preservation | E2 |
 | 6aTr W3 | FL | E5 |
 | MU2f | joint event | E1 |
@@ -105,24 +112,36 @@ the paper's choice to export the balanced subset.
 the 57-D hand-crafted descriptors, and the full 57-D set beats every group
 ablation. The descriptor design is not load-bearing for the result.
 
-**E9 — multi-method on available data. QUOTE ONLY WITH THE E18 CAVEAT.**
-4-method certification at 72 scenes (LCB 0.105) on I4 = 2,915; 5-method at
-120 scenes (LCB 0.148) on I5 = 2,228; proportional allocation. RASS-96
-passes the 4-method event.
+**E9 — multi-method on the FULL intersection. The old E18 caveat is
+WITHDRAWN (see E19).** Coverage was completed in P19, so I4 = I5 = **3,473**,
+the full cross-method intersection — the same population as E1, no longer a
+subpopulation. Proportional allocation. Current numbers, which **supersede**
+the previously circulated 72-scene/LCB-0.105 and 120-scene/LCB-0.148 figures:
 
-**E18 — the coverage is NOT missing at random (unfavourable, must disclose).**
-Zip-NeRF metrics exist for all 3,521 scenes, so covered and missing scenes
-can be compared on identical ground truth. Scenes lacking nerfacto logs are
-systematically *harder*: Zip-NeRF PSNR 15.73 vs 19.40 for covered scenes
-(-3.72 dB), KS 0.317 against the 0.14 guardrail, and regime shares shift by
-up to 0.20 (regime 3 falls from 23.7% of covered to 3.6% of missing).
-BioNeRF is milder but still biased (-2.18 dB, KS 0.178). Consequence: E9's
-audit is *internally* valid — a subset is certified against its own
-population — but that population is easier than the full benchmark, so E9
-is not evidence about the full benchmark. State this whenever E9 is used.
-It also supplies the quantitative explanation for E8's 0/400 stress-test
-result, which attributed the failure to population shift without measuring
-it. Completing the missing scenes is camera-ready work, not rebuttal work.
+| event | 72 scenes | 96 scenes | 120 scenes |
+|---|---|---|---|
+| 4-method (I4) | LCB 0.0700 | **LCB 0.1116** | LCB 0.2007 |
+| 5-method (I5) | LCB 0.0248 | LCB 0.0636 | **LCB 0.1027** |
+
+RASS-96 **passes** the 4-method joint event on the full I4 (94/96 in
+intersection, zero violations); it fails the 5-method event
+(`bionerf.ssim`, `bionerf.lpips`). RASS-48 fails both.
+
+**Be honest that this moved against us**: the 4-method 0.08 target now needs
+96 scenes rather than 72. That is *because* the easy-scene bias is gone — it
+is the confirmation of E18's prediction, and the resulting claim covers the
+whole benchmark rather than a convenient subpopulation. Frame it that way,
+do not hide it.
+
+**E18 — coverage bias: FOUND, then FIXED (E19).** E18 established that the
+missing logs were not missing at random: nerfacto's missing scenes averaged
+Zip-NeRF PSNR 15.73 vs 19.40 (-3.72 dB, KS 0.317 against the 0.14 guardrail,
+regime shares shifted by up to 0.20); BioNeRF -2.18 dB, KS 0.178. **That gap
+no longer exists** — both methods now cover 3,521 of 3,522 scenes, so the
+statistics are undefined by construction. Cite E18 as the diagnosis that
+motivated the recovery and as the quantitative explanation for E8's 0/400
+stress-test result, **not** as a live limitation. The single permanent
+exclusion is `dish_1563900172` (corrupt source image; see E19).
 
 **E13 — DL3DV transfer, the strongest new result.** We generated all 140
 per-scene nerfacto logs ourselves (DL3DV publishes none — verified three
