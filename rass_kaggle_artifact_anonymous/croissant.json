@@ -325,7 +325,7 @@
       "description": "Validator for required files, parseable metadata, and compact list counts.",
       "contentUrl": "scripts/validate_artifact.py",
       "encodingFormat": "text/x-python",
-      "sha256": "4e45956d2a81e02aa7376241e85fb0f22f19f729181ece71d958fa9ea4b72516"
+      "sha256": "b408c0418eb0f0409944b49c55e03c929141a4eb5a96e2c70434597a53fd6c5b"
     },
     {
       "@type": "cr:FileObject",

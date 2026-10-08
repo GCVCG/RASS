@@ -19,7 +19,6 @@ REQUIRED_FILES = [
     "README.md",
     "LICENSE",
     "CITATION.cff",
-    "dataset-metadata.json",
     "croissant.json",
     "metadata/dataset_card.md",
     "metadata/artifact_manifest.json",
