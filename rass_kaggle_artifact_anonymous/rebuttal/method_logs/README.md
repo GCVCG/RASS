@@ -9,8 +9,6 @@
   - nerfacto: 558 rows are tagged `recovered-P19`. Of these, 385 re-evaluate original checkpoints and 173 were
     retrained with the same configuration and seed; this version does not yet separate the two groups.
   - One nerfacto scene was evaluated from its step-28000 checkpoint (noted in its row).
-- `dl3dv_nerfacto/`, `dl3dv_splatfacto/`, `dl3dv_tensorf/`, `dl3dv_instant_ngp/` (repository only): the
-  140 raw per-scene JSONs per method; `dl3dv_metrics.csv` (also in the Kaggle artifact) consolidates them.
 - `dl3dv_metrics.csv`: per-scene metrics for nerfacto, splatfacto (3DGS), TensoRF, and Instant-NGP on all 140
   DL3DV-Benchmark scenes, trained and evaluated by us with nerfstudio (seed 0, downscale 4 / 960P, `ns-eval`).
   nerfacto, splatfacto, and TensoRF use 30k steps; Instant-NGP uses 16k steps (`checkpoint` column), so its

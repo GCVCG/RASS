@@ -1,0 +1,49 @@
+{
+  "schema_version": "rass-event-config/1.0",
+  "event": "five-method joint fidelity on the full cross-method intersection (E9 after P19 log completion)",
+  "population": {
+    "definition": "full cross-method intersection of zipnerf/feature_splatting/instant_ngp_fi/nerfacto/bionerf after the P19 recovery (nerfacto and BioNeRF cover 3,521 of 3,522 scenes; dish_1563900172 excluded); identical to the E1 population",
+    "n_scenes": 3473
+  },
+  "constraints": {
+    "method_metrics": {
+      "zipnerf": [
+        "psnr",
+        "ssim",
+        "lpips"
+      ],
+      "feature_splatting": [
+        "psnr",
+        "ssim",
+        "lpips"
+      ],
+      "instant_ngp_fi": [
+        "psnr",
+        "ssim"
+      ],
+      "nerfacto": [
+        "psnr",
+        "ssim",
+        "lpips"
+      ],
+      "bionerf": [
+        "psnr",
+        "ssim",
+        "lpips"
+      ]
+    }
+  },
+  "tolerances": {
+    "psnr": 0.5,
+    "ssim": 0.01,
+    "lpips": 0.01,
+    "ks": 0.14
+  },
+  "allocation": {
+    "type": "proportional-to-regime-size, largest-remainder rounding",
+    "regimes": "k=6 KMeans seed 0 on the 57-D descriptors excluding proxies num_images/num_frames_total/num_frames_used (shipped mapping, replication validated ARI=1.0)"
+  },
+  "M": 400,
+  "seed_rule": "default_rng(0 + budget_scenes)",
+  "supersedes": "fivemethod_v1.json (common-coverage subpopulation as of 2026-07-24, not missing at random; see E18)"
+}

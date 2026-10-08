@@ -2,10 +2,49 @@
   "@context": {
     "@language": "en",
     "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
     "cr": "http://mlcommons.org/croissant/",
-    "sc": "https://schema.org/",
-    "dct": "http://purl.org/dc/terms/",
     "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform",
+    "samplingRate": "cr:samplingRate",
+    "equivalentProperty": "cr:equivalentProperty",
     "prov": "http://www.w3.org/ns/prov#",
     "foaf": "http://xmlns.com/foaf/0.1/"
   },
@@ -32,27 +71,73 @@
     "reproducibility"
   ],
   "url": "https://www.kaggle.com/datasets/nobodyeh/rass-nerf-benchmark-artifact",
-  "sameAs": [],
-  "version": "1.0.0",
+  "sameAs": [
+    "https://github.com/nobody-eh/RASS"
+  ],
+  "version": "1.1.0",
   "isLiveDataset": false,
   "datePublished": "2026-05-05",
-  "dateModified": "2026-05-05",
+  "dateModified": "2026-10-08",
   "inLanguage": "en",
-  "license": "https://www.gnu.org/licenses/gpl-3.0.html",
-  "usageInfo": "This package is released with the repository GPL-3.0 license included in LICENSE. It does not grant additional rights to underlying Nutrition5k-derived raw scenes or method outputs. Reviewers/users must obtain or regenerate raw assets and full NeRF outputs under the applicable upstream terms before making full-population or leaderboard-quality claims.",
+  "license": [
+    "https://www.gnu.org/licenses/gpl-3.0.html",
+    "https://creativecommons.org/licenses/by-nc/4.0/"
+  ],
+  "usageInfo": "Code, scene lists, descriptors, configurations, and Nutrition5k-derived result tables are released under GPL-3.0 (LICENSE). Files derived from DL3DV-10K (rebuttal/method_logs/dl3dv_metrics.csv, rebuttal/method_logs/dl3dv_descriptors.csv, rebuttal/dl3dv_contract_declaration.json, rebuttal/dl3dv_audit_card.json) are released under CC BY-NC 4.0 for non-commercial research with attribution to DL3DV-10K; no DL3DV images or inputs are redistributed. Raw Nutrition5k-derived scenes and full NeRF outputs are not redistributed and remain governed by their upstream terms.",
   "creator": [
     {
       "@type": "sc:Person",
-      "name": "Anonymous Authors"
+      "name": "Ahmad AlMughrabi",
+      "givenName": "Ahmad",
+      "familyName": "AlMughrabi",
+      "email": "ahmad.almughrabi@ub.edu",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Universitat de Barcelona"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Flavià Serret",
+      "givenName": "Flavià",
+      "familyName": "Serret",
+      "email": "flserrem7@alumnes.ub.edu",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Universitat de Barcelona"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Ricardo Marques",
+      "givenName": "Ricardo",
+      "familyName": "Marques",
+      "email": "ricardo.marques@upf.edu",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Universitat Pompeu Fabra"
+      }
+    },
+    {
+      "@type": "sc:Person",
+      "name": "Petia Radeva",
+      "givenName": "Petia",
+      "familyName": "Radeva",
+      "email": "petia.ivanova@ub.edu",
+      "affiliation": {
+        "@type": "sc:Organization",
+        "name": "Universitat de Barcelona"
+      }
     }
   ],
   "publisher": {
     "@type": "sc:Organization",
-    "name": "Anonymous Institution"
+    "name": "Universitat de Barcelona"
   },
   "maintainer": {
     "@type": "sc:Person",
-    "name": "Anonymous Maintainer"
+    "name": "Ahmad AlMughrabi",
+    "email": "ahmad.almughrabi@ub.edu"
   },
   "dct:conformsTo": [
     "http://mlcommons.org/croissant/1.0",
@@ -66,7 +151,7 @@
       "description": "Top-level explanation of scope, limits, validation, and reproduction steps.",
       "contentUrl": "README.md",
       "encodingFormat": "text/markdown",
-      "sha256": "62cbb94f290942259aa3e88ba3c1a77da3712dfbcc235110e522fb87a5557881"
+      "sha256": "d5b76ea1c016831bf23884622670a17ce5afe9bc2947998d09192cb0efe10eed"
     },
     {
       "@type": "cr:FileObject",
@@ -93,7 +178,7 @@
       "description": "Citation metadata for the paper/artifact, with remaining archival fields handled in the CFF file.",
       "contentUrl": "CITATION.cff",
       "encodingFormat": "text/plain",
-      "sha256": "e9fe761817af4374b2a95e8aac8de9e99945c1ae3692ac8237c27846114c1651"
+      "sha256": "6e969a84d7c52a6bd649cd275903c9cb8189b3a0b7068674503b98123a9f7bcd"
     },
     {
       "@type": "cr:FileObject",
@@ -102,7 +187,7 @@
       "description": "Kaggle dataset metadata used by the Kaggle CLI.",
       "contentUrl": "dataset-metadata.json",
       "encodingFormat": "application/json",
-      "sha256": "404e7f7c4771c23ec4cb48e62bea0f40ad3cdc5ac36858d55c9c88f5127a5320"
+      "sha256": "d53c7adb76564cb456845c4aec21c95f94262f04430f7aa025e331700defb27f"
     },
     {
       "@type": "cr:FileObject",
@@ -111,7 +196,7 @@
       "description": "Dataset card covering intended use, limitations, and external data requirements.",
       "contentUrl": "metadata/dataset_card.md",
       "encodingFormat": "text/markdown",
-      "sha256": "5f3d37dafa5ca19fe77f93266fb5ed1089f126bc2c2537c71cca2a183a49eea6"
+      "sha256": "76059f5684827337d2401fad6bc7a46a87c8287896429c3a84119a769a3dff13"
     },
     {
       "@type": "cr:FileObject",
@@ -255,7 +340,7 @@
       "description": "Validator for required files, parseable metadata, compact list counts, and placeholder reporting.",
       "contentUrl": "scripts/validate_artifact.py",
       "encodingFormat": "text/x-python",
-      "sha256": "7c99c4eb5bd91d0b2d88c694ab3bc916e4b150d20d51003b74f127da74a35961"
+      "sha256": "4e45956d2a81e02aa7376241e85fb0f22f19f729181ece71d958fa9ea4b72516"
     },
     {
       "@type": "cr:FileObject",
@@ -283,6 +368,213 @@
       "contentUrl": "external_data/README_how_to_obtain_or_regenerate_inputs.md",
       "encodingFormat": "text/markdown",
       "sha256": "65670b32437a151382dc10f905157bf8327faf28c5d4f88d64e0123207f3afc2"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "nerfacto_n5k_csv",
+      "name": "nerfacto Nutrition5k metrics",
+      "description": "Per-scene nerfacto PSNR/SSIM/LPIPS on 3,521 Nutrition5k-derived scenes, with a provenance note column.",
+      "contentUrl": "rebuttal/method_logs/nutrition5k_nerfacto_metrics.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "222beee92289f3377002d601a740770c909f9cc606888c53b21db4066d766ce6"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "bionerf_n5k_csv",
+      "name": "BioNeRF Nutrition5k metrics",
+      "description": "Per-scene BioNeRF (fine network) PSNR/SSIM/LPIPS on Nutrition5k-derived scenes, with a provenance note column.",
+      "contentUrl": "rebuttal/method_logs/nutrition5k_bionerf_metrics.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "23d02922e0715f4d5627c8a1c1127c0d7b508070f9f397400b915c2ef7fa132d"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "dl3dv_metrics_csv",
+      "name": "DL3DV metrics",
+      "description": "Per-scene metrics of four methods on the 140 DL3DV-Benchmark scenes (CC BY-NC 4.0).",
+      "contentUrl": "rebuttal/method_logs/dl3dv_metrics.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "41a92c0d3c94c6b82a568bfb05c9606264463df9f96147977caba6231bcbb37e"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "dl3dv_descriptors_csv",
+      "name": "DL3DV descriptors",
+      "description": "Per-scene descriptors of the 140 DL3DV-Benchmark scenes (CC BY-NC 4.0).",
+      "contentUrl": "rebuttal/method_logs/dl3dv_descriptors.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "691f8deedf63f3c2addb2cb48e7d92d43cd1a32e2c6018aa6be81f48fce4c254"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "method_logs_readme",
+      "name": "Method-log README",
+      "description": "Provenance and licensing of the review-period method logs.",
+      "contentUrl": "rebuttal/method_logs/README.md",
+      "encodingFormat": "text/markdown",
+      "sha256": "a4ad6a44d5ee895e796376ac15a7ba5d3ed8a40e8a42be9b65c1f2a176c86b99"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "dl3dv_contract_json",
+      "name": "DL3DV contract declaration",
+      "description": "Timestamped DL3DV audit contract and the labeled post-hoc additions (CC BY-NC 4.0).",
+      "contentUrl": "rebuttal/dl3dv_contract_declaration.json",
+      "encodingFormat": "application/json",
+      "sha256": "19147afd02ade875cfbd0cdddd6207fbcd9e31517108b9f1e27c4804f5b54b50"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "dl3dv_audit_card_json",
+      "name": "DL3DV audit card",
+      "description": "DL3DV audit card with disclosures (CC BY-NC 4.0).",
+      "contentUrl": "rebuttal/dl3dv_audit_card.json",
+      "encodingFormat": "application/json",
+      "sha256": "3f4b80485fd9653a432a7f85d0f1aebdfcff839fc80a5022dfabe99479e24478"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "rebuttal_results_json",
+      "name": "Review-period results",
+      "description": "Machine-readable results, contracts, and seeds of all review-period analyses.",
+      "contentUrl": "rebuttal/rebuttal_results.json",
+      "encodingFormat": "application/json",
+      "sha256": "6dfeabb934dc8a415524fc9542bbcd77132af96f7af18aff9d42a92089c703ec"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "budget_recommendation_json",
+      "name": "Selection-time budget recommendation",
+      "description": "Recorded selection-time rule that fixed RASS-48.",
+      "contentUrl": "rebuttal/selection_artifacts/budget_recommendation.json",
+      "encodingFormat": "application/json",
+      "sha256": "48faa7c3616de0d7f31da14ff496cb0feea1feddd3f93a1d4a56f9992a6682af"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "budget_sweep_summary_csv",
+      "name": "Selection-time budget sweep",
+      "description": "Recorded selection-time sweep summary.",
+      "contentUrl": "rebuttal/selection_artifacts/budget_sweep_summary.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "ca1d8e2a032673d28e5cf18cb56f795585be4c354d616080c0386fe86c86e34b"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "fl36_scene_list_csv",
+      "name": "FL-36 prime scene list",
+      "description": "Scene list of FL-36', a provenance-labeled reimplementation of the facility-location baseline.",
+      "contentUrl": "subsets/fl36/fl36_scene_list.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "556dec499fed78a1cf856c9e708e18ad9350b4aeb5f74b17c29f6ac12a0b6b65"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "fl36_audit_card_json",
+      "name": "FL-36 prime audit card",
+      "description": "Audit card of FL-36' with its reimplementation provenance label.",
+      "contentUrl": "subsets/fl36/fl36_audit_card.json",
+      "encodingFormat": "application/json",
+      "sha256": "af5e1782bbcc25a57ca84f23010e0734aceea3ef7493db198a8ebcf991cb2f20"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "event_config_dispersion_matched_v1",
+      "name": "Event config dispersion_matched_v1",
+      "description": "Versioned audit-event configuration.",
+      "contentUrl": "rebuttal/event_configs/dispersion_matched_v1.json",
+      "encodingFormat": "application/json",
+      "sha256": "7d5c53a77b3c06403cb709579b5bbd0a4345b119874eb60f43ab01337615c15a"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "event_config_fivemethod_v1",
+      "name": "Event config fivemethod_v1",
+      "description": "Versioned audit-event configuration.",
+      "contentUrl": "rebuttal/event_configs/fivemethod_v1.json",
+      "encodingFormat": "application/json",
+      "sha256": "8bb850fe9e1aa3bfb250f320804caf98da5af055bf562dfd1567b13bda321c7a"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "event_config_fivemethod_v2",
+      "name": "Event config fivemethod_v2",
+      "description": "Versioned audit-event configuration.",
+      "contentUrl": "rebuttal/event_configs/fivemethod_v2.json",
+      "encodingFormat": "application/json",
+      "sha256": "0095561f35163a7c52517ccaa8d9b7ae40a816e26db17483247c613cb307d872"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "event_config_fourmethod_v1",
+      "name": "Event config fourmethod_v1",
+      "description": "Versioned audit-event configuration.",
+      "contentUrl": "rebuttal/event_configs/fourmethod_v1.json",
+      "encodingFormat": "application/json",
+      "sha256": "4c59a6d7edd909d055a3c9084912150c099cabb23f2229da60c35e3ecb2b0d89"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "event_config_fourmethod_v2",
+      "name": "Event config fourmethod_v2",
+      "description": "Versioned audit-event configuration.",
+      "contentUrl": "rebuttal/event_configs/fourmethod_v2.json",
+      "encodingFormat": "application/json",
+      "sha256": "6e9e4180041f54fea4c0a1d306d35bf6b1115d6746bdf482c67cab18b647b503"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "event_config_ranking_variantA_v1",
+      "name": "Event config ranking_variantA_v1",
+      "description": "Versioned audit-event configuration.",
+      "contentUrl": "rebuttal/event_configs/ranking_variantA_v1.json",
+      "encodingFormat": "application/json",
+      "sha256": "e1c4887eae945ac7da71048540d380b929f01f3d92f6fa96ea35d2338d640ff3"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "event_config_ranking_variantB_v1",
+      "name": "Event config ranking_variantB_v1",
+      "description": "Versioned audit-event configuration.",
+      "contentUrl": "rebuttal/event_configs/ranking_variantB_v1.json",
+      "encodingFormat": "application/json",
+      "sha256": "340885ba599397367c58be4662eaa4df19c93d6429cd72ca6af1c2157bbf07f3"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "event_config_regime_constrained_c1_v1",
+      "name": "Event config regime_constrained_c1_v1",
+      "description": "Versioned audit-event configuration.",
+      "contentUrl": "rebuttal/event_configs/regime_constrained_c1_v1.json",
+      "encodingFormat": "application/json",
+      "sha256": "e643953373ac63f09bf3ce85f097b45b288cd2bbcceb90b6ed8739b9b653b98d"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "event_config_regime_constrained_c2_v1",
+      "name": "Event config regime_constrained_c2_v1",
+      "description": "Versioned audit-event configuration.",
+      "contentUrl": "rebuttal/event_configs/regime_constrained_c2_v1.json",
+      "encodingFormat": "application/json",
+      "sha256": "bcab7eab1d85a0c2fae3b3b706efcb9e0a1b2a000498b9c62bfbd70f8d7dc958"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "event_config_threemethod_equal_v1",
+      "name": "Event config threemethod_equal_v1",
+      "description": "Versioned audit-event configuration.",
+      "contentUrl": "rebuttal/event_configs/threemethod_equal_v1.json",
+      "encodingFormat": "application/json",
+      "sha256": "3213aecb9efa000a246d8c537ff1652a81e3bac25e14bae5ab37f3d6a6b16f0d"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "event_config_threemethod_proportional_v1",
+      "name": "Event config threemethod_proportional_v1",
+      "description": "Versioned audit-event configuration.",
+      "contentUrl": "rebuttal/event_configs/threemethod_proportional_v1.json",
+      "encodingFormat": "application/json",
+      "sha256": "408c544a91a9baf40e90e2914ecfe276746b5a9e09bbec9dee7d8c60501dbb4c"
     }
   ],
   "recordSet": [
@@ -1499,12 +1791,314 @@
           }
         }
       ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "nerfacto_n5k_metrics",
+      "name": "nerfacto_n5k_metrics",
+      "description": "Per-scene nerfacto metrics on Nutrition5k-derived scenes.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "nerfacto_n5k_metrics/dish_id",
+          "name": "dish_id",
+          "description": "Nutrition5k dish identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "nerfacto_n5k_csv"
+            },
+            "extract": {
+              "column": "dish_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "nerfacto_n5k_metrics/psnr",
+          "name": "psnr",
+          "description": "PSNR in dB.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "nerfacto_n5k_csv"
+            },
+            "extract": {
+              "column": "psnr"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "nerfacto_n5k_metrics/ssim",
+          "name": "ssim",
+          "description": "SSIM.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "nerfacto_n5k_csv"
+            },
+            "extract": {
+              "column": "ssim"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "nerfacto_n5k_metrics/lpips",
+          "name": "lpips",
+          "description": "LPIPS (lower is better).",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "nerfacto_n5k_csv"
+            },
+            "extract": {
+              "column": "lpips"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "nerfacto_n5k_metrics/note",
+          "name": "note",
+          "description": "Provenance note for rows added in the review period.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "nerfacto_n5k_csv"
+            },
+            "extract": {
+              "column": "note"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "bionerf_n5k_metrics",
+      "name": "bionerf_n5k_metrics",
+      "description": "Per-scene BioNeRF metrics on Nutrition5k-derived scenes.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "bionerf_n5k_metrics/dish_id",
+          "name": "dish_id",
+          "description": "Nutrition5k dish identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "bionerf_n5k_csv"
+            },
+            "extract": {
+              "column": "dish_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "bionerf_n5k_metrics/psnr",
+          "name": "psnr",
+          "description": "PSNR in dB.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "bionerf_n5k_csv"
+            },
+            "extract": {
+              "column": "psnr"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "bionerf_n5k_metrics/ssim",
+          "name": "ssim",
+          "description": "SSIM.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "bionerf_n5k_csv"
+            },
+            "extract": {
+              "column": "ssim"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "bionerf_n5k_metrics/lpips",
+          "name": "lpips",
+          "description": "LPIPS (lower is better).",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "bionerf_n5k_csv"
+            },
+            "extract": {
+              "column": "lpips"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "bionerf_n5k_metrics/note",
+          "name": "note",
+          "description": "Provenance note for rows added in the review period.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "bionerf_n5k_csv"
+            },
+            "extract": {
+              "column": "note"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "dl3dv_metrics",
+      "name": "dl3dv_metrics",
+      "description": "Per-scene metrics of four methods on the 140 DL3DV-Benchmark scenes.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "dl3dv_metrics/scene_id",
+          "name": "scene_id",
+          "description": "DL3DV scene hash.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dl3dv_metrics_csv"
+            },
+            "extract": {
+              "column": "scene_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dl3dv_metrics/psnr",
+          "name": "psnr",
+          "description": "PSNR in dB.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "dl3dv_metrics_csv"
+            },
+            "extract": {
+              "column": "psnr"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dl3dv_metrics/ssim",
+          "name": "ssim",
+          "description": "SSIM.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "dl3dv_metrics_csv"
+            },
+            "extract": {
+              "column": "ssim"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dl3dv_metrics/lpips",
+          "name": "lpips",
+          "description": "LPIPS (lower is better).",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "dl3dv_metrics_csv"
+            },
+            "extract": {
+              "column": "lpips"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dl3dv_metrics/method",
+          "name": "method",
+          "description": "nerfstudio method name.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dl3dv_metrics_csv"
+            },
+            "extract": {
+              "column": "method"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "dl3dv_metrics/checkpoint",
+          "name": "checkpoint",
+          "description": "Evaluated checkpoint (training steps).",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "dl3dv_metrics_csv"
+            },
+            "extract": {
+              "column": "checkpoint"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "fl36_scene_list",
+      "name": "fl36_scene_list",
+      "description": "Scenes of FL-36' with their k=6 regime labels.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "fl36_scene_list/dish_id",
+          "name": "dish_id",
+          "description": "Nutrition5k dish identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "fl36_scene_list_csv"
+            },
+            "extract": {
+              "column": "dish_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "fl36_scene_list/cluster",
+          "name": "cluster",
+          "description": "k=6 regime label.",
+          "dataType": "sc:Integer",
+          "source": {
+            "fileObject": {
+              "@id": "fl36_scene_list_csv"
+            },
+            "extract": {
+              "column": "cluster"
+            }
+          }
+        }
+      ]
     }
   ],
-  "citeAs": "Anonymous Authors. RASS: Risk-Aware Scene Subset Selection for Reliable Large-Scale NeRF Benchmarking. Anonymized artifact version 1.0.0, 2026.",
+  "citeAs": "@inproceedings{almughrabi2026rass, title={{RASS}: Risk-Audited Budget Selection for Compact {NeRF} Benchmark Subsets}, author={AlMughrabi, Ahmad and Serret, Flavi{\\`a} and Marques, Ricardo and Radeva, Petia}, booktitle={Advances in Neural Information Processing Systems (NeurIPS), Evaluations and Datasets Track}, year={2026}}",
   "isBasedOn": [
     {
-      "@type": "sc:Dataset",
+      "@type": "sc:CreativeWork",
       "@id": "https://github.com/google-research-datasets/Nutrition5k",
       "name": "Nutrition5k",
       "url": "https://github.com/google-research-datasets/Nutrition5k",
@@ -1513,11 +2107,19 @@
       "datePublished": "2021",
       "license": "https://github.com/google-research-datasets/Nutrition5k#license--contact",
       "version": "1.0.0"
+    },
+    {
+      "@type": "sc:CreativeWork",
+      "@id": "https://github.com/DL3DV-10K/Dataset",
+      "name": "DL3DV-10K",
+      "url": "https://github.com/DL3DV-10K/Dataset",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "description": "Real-world scene dataset whose 140-scene benchmark split was used for the protocol transfer study. Only per-scene metrics and descriptor statistics computed by the authors are released."
     }
   ],
   "prov:wasDerivedFrom": [
     {
-      "@type": "sc:Dataset",
+      "@type": "sc:CreativeWork",
       "@id": "https://github.com/google-research-datasets/Nutrition5k",
       "name": "Nutrition5k",
       "url": "https://github.com/google-research-datasets/Nutrition5k",
@@ -1698,11 +2300,38 @@
         "@type": "prov:Agent",
         "prov:label": "RASS authors"
       }
+    },
+    {
+      "@type": "prov:Activity",
+      "@id": "#activity-p19-log-completion",
+      "prov:label": "Completion of nerfacto and BioNeRF logs",
+      "name": "Completion of nerfacto and BioNeRF logs",
+      "activityType": "collection",
+      "description": "Missing per-scene nerfacto and BioNeRF logs were not missing at random. 1,382 entries were recovered by evaluating surviving final checkpoints (BioNeRF inside its original container) and 176 scenes were retrained with the same configuration and seed; ten existing BioNeRF rows were re-evaluated and reproduced before merging. Both methods now cover 3,521 of 3,522 scenes.",
+      "prov:wasAssociatedWith": {
+        "@type": "prov:Agent",
+        "prov:label": "RASS authors"
+      }
+    },
+    {
+      "@type": "prov:Activity",
+      "@id": "#activity-dl3dv-logs",
+      "prov:label": "DL3DV per-scene log generation",
+      "name": "DL3DV per-scene log generation",
+      "activityType": "collection",
+      "description": "nerfacto, splatfacto, TensoRF, and Instant-NGP were trained and evaluated with nerfstudio on all 140 DL3DV-Benchmark scenes (seed 0, downscale 4); Instant-NGP used 16k steps instead of 30k. The audit contract was recorded before the first scene log.",
+      "prov:used": {
+        "@id": "https://github.com/DL3DV-10K/Dataset"
+      },
+      "prov:wasAssociatedWith": {
+        "@type": "prov:Agent",
+        "prov:label": "RASS authors"
+      }
     }
   ],
   "rai:sourceDatasets": [
     {
-      "@type": "sc:Dataset",
+      "@type": "sc:CreativeWork",
       "@id": "https://github.com/google-research-datasets/Nutrition5k",
       "name": "Nutrition5k",
       "url": "https://github.com/google-research-datasets/Nutrition5k",
@@ -1711,11 +2340,19 @@
       "datePublished": "2021",
       "license": "https://github.com/google-research-datasets/Nutrition5k#license--contact",
       "version": "1.0.0"
+    },
+    {
+      "@type": "sc:CreativeWork",
+      "@id": "https://github.com/DL3DV-10K/Dataset",
+      "name": "DL3DV-10K",
+      "url": "https://github.com/DL3DV-10K/Dataset",
+      "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "description": "Real-world scene dataset whose 140-scene benchmark split was used for the protocol transfer study. Only per-scene metrics and descriptor statistics computed by the authors are released."
     }
   ],
   "rai:dataSources": [
     {
-      "@type": "sc:Dataset",
+      "@type": "sc:CreativeWork",
       "@id": "https://github.com/google-research-datasets/Nutrition5k",
       "name": "Nutrition5k",
       "url": "https://github.com/google-research-datasets/Nutrition5k",
@@ -1752,7 +2389,7 @@
   "rai:dataAnnotationAnalysis": [
     "Annotator disagreement analysis is not applicable because no new human annotations were collected. Quality control consists of structural validation, checksum manifesting, scene-list count checks, parse checks, and reproducibility notes."
   ],
-  "rai:dataReleaseMaintenancePlan": "Version 1.0.0 is a static benchmark-artifact release. Structural or semantic changes to the released tables, code, scene lists, or metadata should be reflected by a version update and updated dateModified field. Known corrections should be documented on the Kaggle dataset page, in the source repository, or in a later artifact version.",
+  "rai:dataReleaseMaintenancePlan": "Version 1.1.0 (2026-10-08) adds the review-period analyses of the NeurIPS 2026 camera-ready paper to version 1.0.0 (2026-05-05), which is unchanged in content. Later corrections are released as new versions with an updated dateModified field and documented in README.md and the source repository.",
   "rai:personalSensitiveInformation": [
     "The released tabular artifact does not intentionally include personal or sensitive information. It contains scene identifiers, descriptor values, subset membership, method names, configuration metadata, and aggregate or per-scene benchmark identifiers.",
     "Underlying Nutrition5k-derived raw data may be subject to its own privacy, licensing, or usage conditions. Users must consult and follow original source-data terms before accessing or redistributing raw assets."
@@ -1768,7 +2405,10 @@
     "RASS-48 is for rapid screening and smoke-test style comparisons. RASS-96 is a stronger compact reporting option when full evaluation is too expensive.",
     "Full audit population evaluation is needed for leaderboard-quality claims.",
     "RASS does not certify arbitrary same-size subsets, regime-level fidelity, cross-method ranking preservation, or nutrition/clinical conclusions.",
-    "The artifact describes derived metadata and benchmark tables; availability and reuse of raw Nutrition5k-derived data depend on upstream source-data terms."
+    "The artifact describes derived metadata and benchmark tables; availability and reuse of raw Nutrition5k-derived data depend on upstream source-data terms.",
+    "Instant-NGP DL3DV scores use 16k training steps and must not be used to rank methods.",
+    "DL3DV proportional and uniform frontiers were declared after the balanced frontier was computed (post hoc).",
+    "In nutrition5k_nerfacto_metrics.csv, 173 retrained rows are tagged recovered-P19 together with 385 re-evaluated rows; this version does not separate them."
   ],
   "rai:dataUseCases": [
     "Recommended: low-cost NeRF benchmark screening, ablation sanity checks, audit-protocol inspection, subset-selection research, and reproduction of packaged audit summaries when required external metric tables are available.",
@@ -1785,5 +2425,5 @@
   ],
   "ethicsPolicy": "Users should treat this package as a research benchmark artifact, respect upstream raw-data access and licensing conditions, cite the artifact and source data, and avoid overstating compact-subset validity beyond the documented audit scope.",
   "diversityPolicy": "The artifact does not make demographic diversity claims. Diversity is considered only in terms of descriptor-space scene regimes for NeRF benchmark engineering.",
-  "cr:citeAs": "Anonymous Authors. RASS: Risk-Aware Scene Subset Selection for Reliable Large-Scale NeRF Benchmarking. Anonymized artifact version 1.0.0, 2026."
+  "cr:citeAs": "@inproceedings{almughrabi2026rass, title={{RASS}: Risk-Audited Budget Selection for Compact {NeRF} Benchmark Subsets}, author={AlMughrabi, Ahmad and Serret, Flavi{\\`a} and Marques, Ricardo and Radeva, Petia}, booktitle={Advances in Neural Information Processing Systems (NeurIPS), Evaluations and Datasets Track}, year={2026}}"
 }

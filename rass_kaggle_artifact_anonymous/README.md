@@ -13,7 +13,7 @@ This package is a Kaggle-ready artifact for the RASS scene-subset audit used in 
 
 ## Scope And Limits
 
-RASS-48 is intended for rapid screening. RASS-96 is the stronger compact reporting option when a full run is too expensive. The full audit population is still needed for leaderboard-quality claims.
+RASS-48 is intended for rapid screening. RASS-96 is the recommended compact reporting subset; it also passes the three- and four-method joint fidelity audits. The full audit population is still needed for leaderboard-quality claims.
 
 RASS does not certify arbitrary same-size subsets. It also does not certify regime-level fidelity, cross-method ranking preservation, or nutrition/clinical conclusions. The compact lists are benchmark engineering aids, not a replacement for full-population evaluation or domain-specific validation.
 
@@ -54,6 +54,28 @@ python scripts/reproduce_tables.py --root .
 python scripts/compute_wilson_lcb.py --successes 113 --trials 400 --confidence 0.95
 ```
 
-## Anonymous Review Note
+## Review-Period Additions (v1.1.0)
 
-This copy removes direct author, institution, personal profile, personal Kaggle owner, and local absolute-path identifiers. The Kaggle owner slug is set to the neutral account `nobodyeh`.
+These files support the analyses added to the NeurIPS 2026 camera-ready paper; paths mirror the source repository.
+
+- `rebuttal/event_configs/`: versioned audit-event configurations (multi-method, ranking, dispersion-matched,
+  regime-constrained). The `_v2` four- and five-method configs use the full 3,473-scene intersection and supersede `_v1`.
+- `rebuttal/method_logs/`: completed nerfacto and BioNeRF logs on Nutrition5k and DL3DV per-scene metrics for four
+  methods; provenance and licensing are in `rebuttal/method_logs/README.md`.
+- `rebuttal/dl3dv_contract_declaration.json`, `rebuttal/dl3dv_audit_card.json`: DL3DV audit contract and disclosures.
+- `rebuttal/selection_artifacts/`: the recorded selection-time rule that fixed RASS-48.
+- `subsets/fl36/`: FL-36', a provenance-labeled reimplementation of the facility-location baseline.
+- `rebuttal/rebuttal_results.json`: machine-readable results, contracts, and seeds.
+
+Erratum: one of the 3,522 validated scenes has no Zip-NeRF metric entry, so the effective audit population is 3,521.
+
+## License
+
+GPL-3.0 (`LICENSE`), except the DL3DV-derived files listed in `rebuttal/method_logs/README.md`, which are released under
+CC BY-NC 4.0 with attribution to DL3DV-10K.
+
+## Citation
+
+```bibtex
+@inproceedings{almughrabi2026rass, title={{RASS}: Risk-Audited Budget Selection for Compact {NeRF} Benchmark Subsets}, author={AlMughrabi, Ahmad and Serret, Flavi{\`a} and Marques, Ricardo and Radeva, Petia}, booktitle={Advances in Neural Information Processing Systems (NeurIPS), Evaluations and Datasets Track}, year={2026}}
+```

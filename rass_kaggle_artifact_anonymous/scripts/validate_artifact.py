@@ -20,7 +20,7 @@ REQUIRED_FILES = [
     "LICENSE",
     "CITATION.cff",
     "dataset-metadata.json",
-    "metadata/croissant.json",
+    "croissant.json",
     "metadata/dataset_card.md",
     "metadata/artifact_manifest.json",
     "scene_lists/rass48_scene_ids.txt",
