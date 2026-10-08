@@ -127,8 +127,8 @@ the full 3,473-scene cross-method intersection and supersede `_v1`. The same
 files ship in Kaggle artifact version 1.1.0 under the same paths.
 
 **Completed nerfacto and BioNeRF logs.** Both methods now cover 3,521 of the
-3,522 scenes (`rebuttal/method_logs/`); provenance tags and their current
-limitation are documented in `rebuttal/method_logs/README.md`.
+3,522 scenes (`rebuttal/method_logs/`); every added row carries a provenance
+tag, documented in `rebuttal/method_logs/README.md`.
 
 **Erratum (audit population).** The effective Zip-NeRF audit population is
 3,521 scenes, not the stated 3,522: one descriptor scene has no entry in the

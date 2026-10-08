@@ -30,8 +30,8 @@
       "source_path_or_placeholder_status": "created/updated for anonymized package",
       "status": "copied",
       "required": true,
-      "sha256": "d5b76ea1c016831bf23884622670a17ce5afe9bc2947998d09192cb0efe10eed",
-      "size_bytes": 4332,
+      "sha256": "577e22e7ebecab0ec2c2062d99e28a9881e474ae9986520a1a3242a191664f9d",
+      "size_bytes": 4847,
       "contains_todo_required": false
     },
     {
@@ -40,9 +40,9 @@
       "source_path_or_placeholder_status": "source run configuration, anonymized",
       "status": "copied",
       "required": true,
-      "sha256": "ac892af96221296a213d333156673cf65ee13f05aeba7e02f2bca75b02d124ed",
-      "size_bytes": 1085,
-      "contains_todo_required": true
+      "sha256": "300b72af2a2bcdc848d91be9daeb997105d28a9cfe0e593a4d7f614906390fef",
+      "size_bytes": 1246,
+      "contains_todo_required": false
     },
     {
       "path": "configs/seeds.yaml",
@@ -50,9 +50,9 @@
       "source_path_or_placeholder_status": "source run configuration",
       "status": "copied",
       "required": true,
-      "sha256": "ca2a5d0ad323a42a9e415b2e6708bd4a547a0a47c3bcd66d6acbeec44010de1e",
-      "size_bytes": 342,
-      "contains_todo_required": true
+      "sha256": "355e09d89a27e438ad61cb4176e8298932eab0102269653af7362d5b1d3a17fc",
+      "size_bytes": 426,
+      "contains_todo_required": false
     },
     {
       "path": "configs/thresholds.yaml",
@@ -70,8 +70,8 @@
       "source_path_or_placeholder_status": "anonymized Croissant metadata configured for neutral Kaggle account nobodyeh",
       "status": "anonymized_group_metadata",
       "required": true,
-      "sha256": "923004bb2e4c956925ea1ca18db0d4144d6920f683e090efda6a3f9f97102223",
-      "size_bytes": 90276,
+      "sha256": "4fd822b9ee7f15d3a75a82fcdb3fbb4e2718fae58100401a72e975139b14601b",
+      "size_bytes": 98732,
       "contains_todo_required": false
     },
     {
@@ -100,9 +100,9 @@
       "source_path_or_placeholder_status": "generated from packaged descriptor CSV",
       "status": "copied",
       "required": true,
-      "sha256": "f6d8b4ce865582dc72ba3d52402bd1a7022e14152b86361ecb07c678af54f122",
-      "size_bytes": 4212,
-      "contains_todo_required": true
+      "sha256": "0cda9510e9635d9e606e76e0e0d6bf6032101c7de1a6baae74e28e149900ed20",
+      "size_bytes": 6638,
+      "contains_todo_required": false
     },
     {
       "path": "descriptors/regime_labels.csv",
@@ -130,8 +130,58 @@
       "source_path_or_placeholder_status": "created for this package",
       "status": "copied",
       "required": true,
-      "sha256": "65670b32437a151382dc10f905157bf8327faf28c5d4f88d64e0123207f3afc2",
-      "size_bytes": 1313,
+      "sha256": "72fc854e38885a187d30e288425cc2126f4ce82decea633db777ce8404016849",
+      "size_bytes": 1255,
+      "contains_todo_required": false
+    },
+    {
+      "path": "logs/README.md",
+      "purpose": "Per-scene method log used by the audits.",
+      "source_path_or_placeholder_status": "converted from the source repository result tables",
+      "status": "copied",
+      "required": false,
+      "sha256": "d91500482d07927bd2df74cef9bd0990918cf97b8f4abdd68d4e39c30993e2ed",
+      "size_bytes": 1232,
+      "contains_todo_required": false
+    },
+    {
+      "path": "logs/nutrition5k_feature_splatting_metrics.csv",
+      "purpose": "Per-scene method log used by the audits.",
+      "source_path_or_placeholder_status": "converted from the source repository result tables",
+      "status": "copied",
+      "required": false,
+      "sha256": "982e8a998403391db5dad742b599cf945815587ed9c78319cb3cad8563a7a0a6",
+      "size_bytes": 639996,
+      "contains_todo_required": false
+    },
+    {
+      "path": "logs/nutrition5k_instant_ngp_full_image_metrics.csv",
+      "purpose": "Per-scene method log used by the audits.",
+      "source_path_or_placeholder_status": "converted from the source repository result tables",
+      "status": "copied",
+      "required": false,
+      "sha256": "b10ee7869b506ca9f8a66c8547e70a9410865b291d061bd0975fd23887c97ee7",
+      "size_bytes": 359926,
+      "contains_todo_required": false
+    },
+    {
+      "path": "logs/nutrition5k_instant_ngp_object_centric_metrics.csv",
+      "purpose": "Per-scene method log used by the audits.",
+      "source_path_or_placeholder_status": "converted from the source repository result tables",
+      "status": "copied",
+      "required": false,
+      "sha256": "b7a5270f80c4873f1ff59fd1d442bf9802dd8d1157a5f2f2631c7cf8f77b61dc",
+      "size_bytes": 356011,
+      "contains_todo_required": false
+    },
+    {
+      "path": "logs/nutrition5k_zipnerf_metrics.csv",
+      "purpose": "Per-scene method log used by the audits.",
+      "source_path_or_placeholder_status": "converted from the source repository result tables",
+      "status": "copied",
+      "required": false,
+      "sha256": "a29ed9281e13ce96acb9db6b7e2635cd273428afcd31b11d00829a67b81f7ede",
+      "size_bytes": 638357,
       "contains_todo_required": false
     },
     {
@@ -280,8 +330,8 @@
       "source_path_or_placeholder_status": "generated for v1.1.0",
       "status": "generated",
       "required": false,
-      "sha256": "a4ad6a44d5ee895e796376ac15a7ba5d3ed8a40e8a42be9b65c1f2a176c86b99",
-      "size_bytes": 1782,
+      "sha256": "93f343c225a33c43b2b8fc2bdcb1cb2a2873fa2906d0662f8f556824f06df0fd",
+      "size_bytes": 1907,
       "contains_todo_required": false
     },
     {
@@ -320,7 +370,7 @@
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
       "required": false,
-      "sha256": "222beee92289f3377002d601a740770c909f9cc606888c53b21db4066d766ce6",
+      "sha256": "86d38e764cea43a71578b13db1fa9ff91788f93583f72a7d573ed09b2c8d9189",
       "size_bytes": 265137,
       "contains_todo_required": false
     },
@@ -418,27 +468,27 @@
       "path": "scripts/compute_audit.py",
       "purpose": "Audit-loop scaffold that states required inputs.",
       "source_path_or_placeholder_status": "placeholder scaffold; exact final audit loop must be ported before full recomputation",
-      "status": "copied",
+      "status": "implemented",
       "required": true,
-      "sha256": "056d7fcb3a578fda5a32f446d85b394fc833f70d5726865b468bf8109b6b8b9d",
-      "size_bytes": 1111,
-      "contains_todo_required": true
+      "sha256": "4e3baf2a932b0f5c6454560c5c4c20adbefbb784df836a3c47569a949b10ab23",
+      "size_bytes": 6769,
+      "contains_todo_required": false
     },
     {
       "path": "scripts/compute_fidelity_event.py",
       "purpose": "Fidelity-event scaffold that states required inputs.",
       "source_path_or_placeholder_status": "placeholder scaffold; exact final criterion must be ported before full recomputation",
-      "status": "copied",
+      "status": "implemented",
       "required": true,
-      "sha256": "2539abcb998061fedd510f070d6b23761a9694bb3c3a95d2678b26630d0ffbf3",
-      "size_bytes": 1058,
-      "contains_todo_required": true
+      "sha256": "85dfe6499800d1c973607a8b0a3bd9e41e3c8ed21fb08e37282e190177ad7493",
+      "size_bytes": 1732,
+      "contains_todo_required": false
     },
     {
       "path": "scripts/compute_wilson_lcb.py",
       "purpose": "Implemented Wilson lower confidence bound CLI.",
       "source_path_or_placeholder_status": "created for this package",
-      "status": "copied",
+      "status": "implemented",
       "required": true,
       "sha256": "aed19aacea5f6cbf12945214cc671672f5f34becfe7b54be0bcd115d864f55d9",
       "size_bytes": 1806,
@@ -448,27 +498,27 @@
       "path": "scripts/generate_candidates.py",
       "purpose": "Candidate-generation scaffold that states required inputs.",
       "source_path_or_placeholder_status": "placeholder scaffold; exact final generation routine not present as package-native script",
-      "status": "copied",
+      "status": "implemented",
       "required": true,
-      "sha256": "fa45ec8be60db104bec49f863cdb52c8ecc20163c41ee74cdaba46d7a5bb9d09",
-      "size_bytes": 1192,
-      "contains_todo_required": true
+      "sha256": "cff1b91c0a203fcf3a3fb38f81d284242116a3f695fdae76f5d0a770d7b5d12a",
+      "size_bytes": 1366,
+      "contains_todo_required": false
     },
     {
       "path": "scripts/reproduce_tables.py",
       "purpose": "Packaged table summary script that flags external inputs needed for full recomputation.",
       "source_path_or_placeholder_status": "created for this package",
-      "status": "copied",
+      "status": "implemented",
       "required": true,
-      "sha256": "7ea6f7ddf48ea2bfb4ca202556436411e61d4b3a3fbb93821a84d023559f6384",
-      "size_bytes": 1225,
-      "contains_todo_required": true
+      "sha256": "a13756c3da2200881c5683369da5704816253de49d561af806d5e68ad6a387c7",
+      "size_bytes": 2149,
+      "contains_todo_required": false
     },
     {
       "path": "scripts/validate_artifact.py",
       "purpose": "Artifact validator for required files, CSV/YAML/JSON parsing, compact scene counts, and placeholder reporting.",
       "source_path_or_placeholder_status": "created for this package",
-      "status": "copied",
+      "status": "implemented",
       "required": true,
       "sha256": "4e45956d2a81e02aa7376241e85fb0f22f19f729181ece71d958fa9ea4b72516",
       "size_bytes": 4654,

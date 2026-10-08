@@ -6,8 +6,9 @@
   The `note` column records provenance of rows added in the 2026 review period:
   - BioNeRF: `recovered-P19` (997 rows; original checkpoints re-evaluated in the original container) and
     `retrained-P19` (3 rows; no checkpoint survived, retrained with the same configuration and seed).
-  - nerfacto: 558 rows are tagged `recovered-P19`. Of these, 385 re-evaluate original checkpoints and 173 were
-    retrained with the same configuration and seed; this version does not yet separate the two groups.
+  - nerfacto: `recovered-P19` (385 rows; original checkpoints re-evaluated) and `retrained-P19` (173 rows; no
+    checkpoint survived, retrained with the same configuration and seed). The split follows the cluster listing of
+    scenes with a surviving final 30k checkpoint (`nerfacto_cluster_30k_checkpoint_scenes.txt`).
   - One nerfacto scene was evaluated from its step-28000 checkpoint (noted in its row).
 - `dl3dv_nerfacto/`, `dl3dv_splatfacto/`, `dl3dv_tensorf/`, `dl3dv_instant_ngp/` (repository only): the
   140 raw per-scene JSONs per method; `dl3dv_metrics.csv` (also in the Kaggle artifact) consolidates them.

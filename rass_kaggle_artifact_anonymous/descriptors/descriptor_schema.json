@@ -3,7 +3,93 @@
   "source_path": "sweep_cluster_k/k_6/feats_normalized.csv",
   "scene_id_column": "dish_id",
   "normalization": "Values copied from the existing normalized k=6 descriptor table in the source repository.",
-  "field_definitions": "TODO_REQUIRED: Add paper-level semantic definitions and units for each descriptor before archival publication.",
+  "field_definitions": {
+    "units": "Unitless: values are normalized (log1p for heavy-tailed non-negative features, robust or standard scaling, clipping to [-3, 3], median imputation); the excluded budget proxies are num_images, num_frames_total, num_frames_used.",
+    "groups": {
+      "capture_pose": {
+        "meaning": "Camera intrinsics and distortion, scene scale, and camera-position and viewing-angle coverage.",
+        "fields": [
+          "aabb_scale",
+          "camera_angle_x",
+          "camera_angle_y",
+          "cx",
+          "cy",
+          "fl_x",
+          "fl_y",
+          "h",
+          "w",
+          "k1",
+          "k2",
+          "k3",
+          "p1",
+          "p2",
+          "mean_camera_center_dist",
+          "std_camera_center_dist",
+          "mean_view_angle_var",
+          "std_view_angle_var",
+          "num_images",
+          "num_frames_total",
+          "num_frames_used"
+        ]
+      },
+      "image_stats": {
+        "meaning": "Per-frame image entropy and sharpness (mean and standard deviation over frames).",
+        "fields": [
+          "entropy_mean",
+          "entropy_std",
+          "sharpness_mean",
+          "sharpness_std"
+        ]
+      },
+      "texture": {
+        "meaning": "Fraction of edge pixels per frame.",
+        "fields": [
+          "edge_frac_mean",
+          "edge_frac_std"
+        ]
+      },
+      "mask_geometry": {
+        "meaning": "Foreground-mask area fraction, bounding-box aspect ratio, and connected components.",
+        "fields": [
+          "area_frac_mean",
+          "area_frac_std",
+          "bbox_aspect_ratio_mean",
+          "bbox_aspect_ratio_std",
+          "largest_comp_frac_mean",
+          "largest_comp_frac_std",
+          "num_components_mean",
+          "num_components_std"
+        ]
+      },
+      "sparse_geometry": {
+        "meaning": "Extent, volume, point count, and density of the COLMAP sparse reconstruction.",
+        "fields": [
+          "bbox_max_x",
+          "bbox_max_y",
+          "bbox_max_z",
+          "bbox_min_x",
+          "bbox_min_y",
+          "bbox_min_z",
+          "extent_x",
+          "extent_y",
+          "extent_z",
+          "volume",
+          "point_count",
+          "point_density",
+          "mean_error",
+          "median_error",
+          "std_error",
+          "mean_track_length",
+          "median_track_length",
+          "std_track_length",
+          "mean_visible_points",
+          "std_visible_points",
+          "mean_visible_ratio",
+          "std_visible_ratio"
+        ]
+      }
+    }
+  },
   "fields": [
     {
       "name": "dish_id",

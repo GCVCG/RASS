@@ -45,6 +45,9 @@ FRESH = {
     "bionerf": (SCRATCH / "bionerf_fresh_json",
                 ("fine_psnr", "fine_ssim", "fine_lpips")),
 }
+# nerfacto's retrained JSONs share the recovered directory, so the tag comes from
+# the cluster listing of scenes whose final 30k checkpoint survived.
+NERFACTO_CKPT = REPO / "rebuttal/method_logs/nerfacto_cluster_30k_checkpoint_scenes.txt"
 
 
 def read_metrics(path: pathlib.Path, keys: tuple[str, ...]) -> dict | None:
@@ -67,6 +70,7 @@ def read_metrics(path: pathlib.Path, keys: tuple[str, ...]) -> dict | None:
 def main() -> None:
     dry = "--dry-run" in sys.argv
     pop = set(pd.read_csv(K6)["dish_id"].astype(str))
+    ckpt = set(NERFACTO_CKPT.read_text().split())
     for method, (csv_path, json_dir, keys) in SOURCES.items():
         df = pd.read_csv(csv_path)
         have = set(df["dish_id"].astype(str))
@@ -83,7 +87,8 @@ def main() -> None:
             if m is None:
                 print(f"  {method}: unreadable metrics in {p.name}")
                 continue
-            rows.append({"dish_id": dish, **m, "note": "recovered-P19"})
+            fresh = method == "nerfacto" and dish not in ckpt
+            rows.append({"dish_id": dish, **m, "note": "retrained-P19" if fresh else "recovered-P19"})
         fresh_dir, fresh_keys = FRESH.get(method, (None, None))
         n_fresh = 0
         if fresh_dir and fresh_dir.exists():

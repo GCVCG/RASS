@@ -10,6 +10,8 @@ This package is a Kaggle-ready artifact for the RASS scene-subset audit used in 
 - `scene_lists/cross_method_common_ids.txt`: scenes shared by the available cross-method tables.
 - `descriptors/`: normalized scene descriptors and k=6 regime labels copied from the source repository.
 - `results/`: saved audit frontier and cross-method diagnostic CSVs copied from existing outputs.
+- `logs/`: per-scene Zip-NeRF, Feature-Splatting, and Instant-NGP (full-image and object-centric) metrics on the
+  Nutrition5k-derived scenes; see `logs/README.md`.
 
 ## Scope And Limits
 
@@ -37,22 +39,19 @@ Validation checks required files, parses CSV/YAML/JSON files, verifies scene-lis
 
 ## Reproduce The Audit
 
-The packaged CSVs are copied from existing repository results. Full audit recomputation requires the external metric tables and any raw or regenerated NeRF outputs described under `external_data/`.
-
-Typical flow:
+The per-scene logs in `logs/` are the inputs of every Nutrition5k audit in the paper. The audit runs on a CPU in seconds:
 
 ```bash
-python scripts/generate_candidates.py --help
-python scripts/compute_fidelity_event.py --help
-python scripts/compute_audit.py --help
-python scripts/reproduce_tables.py --root .
+python scripts/compute_audit.py                      # frontier; checks 88/400 at 48 and 113/400 at 96 scenes
+python scripts/compute_fidelity_event.py             # export audit of RASS-48 (paper Table 5)
+python scripts/reproduce_tables.py                   # full frontier, RASS-48/96 audits, regenerates RASS-96
+python scripts/generate_candidates.py --subset-size 48 --output candidates_48.csv
+python scripts/compute_wilson_lcb.py --successes 113 --trials 400
 ```
 
-`compute_wilson_lcb.py` is fully implemented and can be used independently:
-
-```bash
-python scripts/compute_wilson_lcb.py --successes 113 --trials 400 --confidence 0.95
-```
+RASS-96 is the export-rule output of the audit (smallest joint objective among passing candidates at 96 scenes).
+RASS-48 is the recommended subset of the recorded selection-time sweep (`rebuttal/selection_artifacts/`), whose event
+also included cross-method gap terms; it is released as a fixed list and passes the audit above.
 
 ## Review-Period Additions (v1.1.0)
 

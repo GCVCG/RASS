@@ -54,9 +54,9 @@
     "RASS-48",
     "RASS-96",
     "RASS NeRF benchmark artifact",
-    "Risk-aware scene subset selection artifact for NeRF evaluation"
+    "Risk-audited budget selection artifact for NeRF evaluation"
   ],
-  "description": "Kaggle-ready benchmark artifact for risk-aware compact scene-list auditing in NeRF evaluation. The package contains RASS-48 and RASS-96 scene lists, the full ZipNeRF audit scene list, the cross-method common scene list, normalized scene descriptors, k=6 regime labels, audit thresholds and seeds, copied audit frontier and cross-method diagnostic CSVs, validation code, Wilson lower-confidence-bound code, and reproduction scaffolds. Raw Nutrition5k-derived images, scene assets, and complete NeRF outputs are not redistributed unless separately permitted by their upstream terms.",
+  "description": "Artifact for the NeurIPS 2026 paper \"RASS: Risk-Audited Budget Selection for Compact NeRF Benchmark Subsets\". It contains the RASS-48 and RASS-96 scene lists, the full Zip-NeRF audit scene list, the cross-method common scene list, normalized scene descriptors, k=6 regime labels, audit thresholds and seeds, per-scene Zip-NeRF, Feature-Splatting, Instant-NGP, nerfacto, and BioNeRF logs on the Nutrition5k-derived scenes, DL3DV per-scene metrics for four methods, versioned audit-event configurations, and scripts that recompute the paper's audit frontier and export audits on a CPU. Raw Nutrition5k-derived images, scene assets, and complete NeRF outputs are not redistributed.",
   "keywords": [
     "NeRF",
     "RASS",
@@ -68,7 +68,10 @@
     "Feature Splatting",
     "Croissant",
     "computer vision",
-    "reproducibility"
+    "reproducibility",
+    "nerfacto",
+    "BioNeRF",
+    "DL3DV"
   ],
   "url": "https://www.kaggle.com/datasets/nobodyeh/rass-nerf-benchmark-artifact",
   "sameAs": [
@@ -151,7 +154,7 @@
       "description": "Top-level explanation of scope, limits, validation, and reproduction steps.",
       "contentUrl": "README.md",
       "encodingFormat": "text/markdown",
-      "sha256": "d5b76ea1c016831bf23884622670a17ce5afe9bc2947998d09192cb0efe10eed"
+      "sha256": "577e22e7ebecab0ec2c2062d99e28a9881e474ae9986520a1a3242a191664f9d"
     },
     {
       "@type": "cr:FileObject",
@@ -241,7 +244,7 @@
       "description": "Generated schema for the descriptor table columns.",
       "contentUrl": "descriptors/descriptor_schema.json",
       "encodingFormat": "application/json",
-      "sha256": "f6d8b4ce865582dc72ba3d52402bd1a7022e14152b86361ecb07c678af54f122"
+      "sha256": "0cda9510e9635d9e606e76e0e0d6bf6032101c7de1a6baae74e28e149900ed20"
     },
     {
       "@type": "cr:FileObject",
@@ -259,7 +262,7 @@
       "description": "Known audit seeds and trial counts copied from the source run configuration.",
       "contentUrl": "configs/seeds.yaml",
       "encodingFormat": "application/x-yaml",
-      "sha256": "ca2a5d0ad323a42a9e415b2e6708bd4a547a0a47c3bcd66d6acbeec44010de1e"
+      "sha256": "355e09d89a27e438ad61cb4176e8298932eab0102269653af7362d5b1d3a17fc"
     },
     {
       "@type": "cr:FileObject",
@@ -268,25 +271,25 @@
       "description": "High-level audit settings and external-input requirements.",
       "contentUrl": "configs/audit_settings.yaml",
       "encodingFormat": "application/x-yaml",
-      "sha256": "ac892af96221296a213d333156673cf65ee13f05aeba7e02f2bca75b02d124ed"
+      "sha256": "300b72af2a2bcdc848d91be9daeb997105d28a9cfe0e593a4d7f614906390fef"
     },
     {
       "@type": "cr:FileObject",
       "@id": "generate_candidates_py",
-      "name": "Candidate generation scaffold",
-      "description": "Script scaffold documenting required candidate-generation inputs.",
+      "name": "Candidate generation",
+      "description": "Writes the balanced candidate subsets drawn by the audit.",
       "contentUrl": "scripts/generate_candidates.py",
       "encodingFormat": "text/x-python",
-      "sha256": "fa45ec8be60db104bec49f863cdb52c8ecc20163c41ee74cdaba46d7a5bb9d09"
+      "sha256": "cff1b91c0a203fcf3a3fb38f81d284242116a3f695fdae76f5d0a770d7b5d12a"
     },
     {
       "@type": "cr:FileObject",
       "@id": "compute_fidelity_event_py",
-      "name": "Fidelity event scaffold",
-      "description": "Script scaffold documenting required fidelity-event inputs.",
+      "name": "Fidelity event",
+      "description": "Export audit of one scene list against the joint mean + KS event.",
       "contentUrl": "scripts/compute_fidelity_event.py",
       "encodingFormat": "text/x-python",
-      "sha256": "2539abcb998061fedd510f070d6b23761a9694bb3c3a95d2678b26630d0ffbf3"
+      "sha256": "85dfe6499800d1c973607a8b0a3bd9e41e3c8ed21fb08e37282e190177ad7493"
     },
     {
       "@type": "cr:FileObject",
@@ -300,26 +303,26 @@
     {
       "@type": "cr:FileObject",
       "@id": "compute_audit_py",
-      "name": "Audit computation scaffold",
-      "description": "Script scaffold documenting required full-audit inputs.",
+      "name": "Audit computation",
+      "description": "Recomputes the budget frontier from the released logs; reproduces 88/400 at 48 and 113/400 at 96 scenes.",
       "contentUrl": "scripts/compute_audit.py",
       "encodingFormat": "text/x-python",
-      "sha256": "056d7fcb3a578fda5a32f446d85b394fc833f70d5726865b468bf8109b6b8b9d"
+      "sha256": "4e3baf2a932b0f5c6454560c5c4c20adbefbb784df836a3c47569a949b10ab23"
     },
     {
       "@type": "cr:FileObject",
       "@id": "reproduce_tables_py",
-      "name": "Table reproduction helper",
-      "description": "Helper script that summarizes packaged tables and flags external inputs required for full recomputation.",
+      "name": "Table reproduction",
+      "description": "Reproduces the frontier and the RASS-48/96 export audits and regenerates RASS-96.",
       "contentUrl": "scripts/reproduce_tables.py",
       "encodingFormat": "text/x-python",
-      "sha256": "7ea6f7ddf48ea2bfb4ca202556436411e61d4b3a3fbb93821a84d023559f6384"
+      "sha256": "a13756c3da2200881c5683369da5704816253de49d561af806d5e68ad6a387c7"
     },
     {
       "@type": "cr:FileObject",
       "@id": "validate_artifact_py",
       "name": "Artifact validator",
-      "description": "Validator for required files, parseable metadata, compact list counts, and placeholder reporting.",
+      "description": "Validator for required files, parseable metadata, and compact list counts.",
       "contentUrl": "scripts/validate_artifact.py",
       "encodingFormat": "text/x-python",
       "sha256": "4e45956d2a81e02aa7376241e85fb0f22f19f729181ece71d958fa9ea4b72516"
@@ -349,7 +352,7 @@
       "description": "Instructions for obtaining or regenerating raw Nutrition5k-derived assets and full NeRF outputs when permitted.",
       "contentUrl": "external_data/README_how_to_obtain_or_regenerate_inputs.md",
       "encodingFormat": "text/markdown",
-      "sha256": "65670b32437a151382dc10f905157bf8327faf28c5d4f88d64e0123207f3afc2"
+      "sha256": "72fc854e38885a187d30e288425cc2126f4ce82decea633db777ce8404016849"
     },
     {
       "@type": "cr:FileObject",
@@ -358,7 +361,7 @@
       "description": "Per-scene nerfacto PSNR/SSIM/LPIPS on 3,521 Nutrition5k-derived scenes, with a provenance note column.",
       "contentUrl": "rebuttal/method_logs/nutrition5k_nerfacto_metrics.csv",
       "encodingFormat": "text/csv",
-      "sha256": "222beee92289f3377002d601a740770c909f9cc606888c53b21db4066d766ce6"
+      "sha256": "86d38e764cea43a71578b13db1fa9ff91788f93583f72a7d573ed09b2c8d9189"
     },
     {
       "@type": "cr:FileObject",
@@ -394,7 +397,7 @@
       "description": "Provenance and licensing of the review-period method logs.",
       "contentUrl": "rebuttal/method_logs/README.md",
       "encodingFormat": "text/markdown",
-      "sha256": "a4ad6a44d5ee895e796376ac15a7ba5d3ed8a40e8a42be9b65c1f2a176c86b99"
+      "sha256": "93f343c225a33c43b2b8fc2bdcb1cb2a2873fa2906d0662f8f556824f06df0fd"
     },
     {
       "@type": "cr:FileObject",
@@ -557,6 +560,42 @@
       "contentUrl": "rebuttal/event_configs/threemethod_proportional_v1.json",
       "encodingFormat": "application/json",
       "sha256": "408c544a91a9baf40e90e2914ecfe276746b5a9e09bbec9dee7d8c60501dbb4c"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "zipnerf_log_csv",
+      "name": "Zip-NeRF per-scene log",
+      "description": "Per-scene Zip-NeRF metrics on the Nutrition5k-derived scenes.",
+      "contentUrl": "logs/nutrition5k_zipnerf_metrics.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "a29ed9281e13ce96acb9db6b7e2635cd273428afcd31b11d00829a67b81f7ede"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "feature_splatting_log_csv",
+      "name": "Feature-Splatting per-scene log",
+      "description": "Per-scene Feature-Splatting metrics on the Nutrition5k-derived scenes.",
+      "contentUrl": "logs/nutrition5k_feature_splatting_metrics.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "982e8a998403391db5dad742b599cf945815587ed9c78319cb3cad8563a7a0a6"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "instant_ngp_full_image_log_csv",
+      "name": "Instant-NGP full image per-scene log",
+      "description": "Per-scene Instant-NGP full image metrics on the Nutrition5k-derived scenes.",
+      "contentUrl": "logs/nutrition5k_instant_ngp_full_image_metrics.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "b10ee7869b506ca9f8a66c8547e70a9410865b291d061bd0975fd23887c97ee7"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "instant_ngp_object_centric_log_csv",
+      "name": "Instant-NGP object-centric per-scene log",
+      "description": "Per-scene Instant-NGP object-centric metrics on the Nutrition5k-derived scenes.",
+      "contentUrl": "logs/nutrition5k_instant_ngp_object_centric_metrics.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "b7a5270f80c4873f1ff59fd1d442bf9802dd8d1157a5f2f2631c7cf8f77b61dc"
     }
   ],
   "recordSet": [
@@ -2075,6 +2114,248 @@
           }
         }
       ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "zipnerf_n5k_metrics",
+      "name": "zipnerf_n5k_metrics",
+      "description": "Per-scene Zip-NeRF metrics.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "zipnerf_n5k_metrics/dish_id",
+          "name": "dish_id",
+          "description": "Nutrition5k dish identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "zipnerf_log_csv"
+            },
+            "extract": {
+              "column": "dish_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "zipnerf_n5k_metrics/psnr",
+          "name": "psnr",
+          "description": "PSNR in dB (mean over test views).",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "zipnerf_log_csv"
+            },
+            "extract": {
+              "column": "psnr"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "zipnerf_n5k_metrics/ssim",
+          "name": "ssim",
+          "description": "SSIM.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "zipnerf_log_csv"
+            },
+            "extract": {
+              "column": "ssim"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "zipnerf_n5k_metrics/lpips",
+          "name": "lpips",
+          "description": "LPIPS (lower is better).",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "zipnerf_log_csv"
+            },
+            "extract": {
+              "column": "lpips"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "feature_splatting_n5k_metrics",
+      "name": "feature_splatting_n5k_metrics",
+      "description": "Per-scene Feature-Splatting metrics.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "feature_splatting_n5k_metrics/dish_id",
+          "name": "dish_id",
+          "description": "Nutrition5k dish identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "feature_splatting_log_csv"
+            },
+            "extract": {
+              "column": "dish_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "feature_splatting_n5k_metrics/psnr",
+          "name": "psnr",
+          "description": "PSNR in dB (mean over test views).",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "feature_splatting_log_csv"
+            },
+            "extract": {
+              "column": "psnr"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "feature_splatting_n5k_metrics/ssim",
+          "name": "ssim",
+          "description": "SSIM.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "feature_splatting_log_csv"
+            },
+            "extract": {
+              "column": "ssim"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "feature_splatting_n5k_metrics/lpips",
+          "name": "lpips",
+          "description": "LPIPS (lower is better).",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "feature_splatting_log_csv"
+            },
+            "extract": {
+              "column": "lpips"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "instant_ngp_full_image_n5k_metrics",
+      "name": "instant_ngp_full_image_n5k_metrics",
+      "description": "Per-scene Instant-NGP full image metrics.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "instant_ngp_full_image_n5k_metrics/dish_id",
+          "name": "dish_id",
+          "description": "Nutrition5k dish identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "instant_ngp_full_image_log_csv"
+            },
+            "extract": {
+              "column": "dish_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "instant_ngp_full_image_n5k_metrics/psnr_frame_mean",
+          "name": "psnr_frame_mean",
+          "description": "PSNR in dB (mean over test views).",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "instant_ngp_full_image_log_csv"
+            },
+            "extract": {
+              "column": "psnr_frame_mean"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "instant_ngp_full_image_n5k_metrics/ssim",
+          "name": "ssim",
+          "description": "SSIM.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "instant_ngp_full_image_log_csv"
+            },
+            "extract": {
+              "column": "ssim"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "instant_ngp_object_centric_n5k_metrics",
+      "name": "instant_ngp_object_centric_n5k_metrics",
+      "description": "Per-scene Instant-NGP object-centric metrics.",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "instant_ngp_object_centric_n5k_metrics/dish_id",
+          "name": "dish_id",
+          "description": "Nutrition5k dish identifier.",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "instant_ngp_object_centric_log_csv"
+            },
+            "extract": {
+              "column": "dish_id"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "instant_ngp_object_centric_n5k_metrics/psnr_frame_mean",
+          "name": "psnr_frame_mean",
+          "description": "PSNR in dB (mean over test views).",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "instant_ngp_object_centric_log_csv"
+            },
+            "extract": {
+              "column": "psnr_frame_mean"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "instant_ngp_object_centric_n5k_metrics/ssim",
+          "name": "ssim",
+          "description": "SSIM.",
+          "dataType": "sc:Float",
+          "source": {
+            "fileObject": {
+              "@id": "instant_ngp_object_centric_log_csv"
+            },
+            "extract": {
+              "column": "ssim"
+            }
+          }
+        }
+      ]
     }
   ],
   "citeAs": "@inproceedings{almughrabi2026rass, title={{RASS}: Risk-Audited Budget Selection for Compact {NeRF} Benchmark Subsets}, author={AlMughrabi, Ahmad and Serret, Flavi{\\`a} and Marques, Ricardo and Radeva, Petia}, booktitle={Advances in Neural Information Processing Systems (NeurIPS), Evaluations and Datasets Track}, year={2026}}",
@@ -2389,8 +2670,7 @@
     "RASS does not certify arbitrary same-size subsets, regime-level fidelity, cross-method ranking preservation, or nutrition/clinical conclusions.",
     "The artifact describes derived metadata and benchmark tables; availability and reuse of raw Nutrition5k-derived data depend on upstream source-data terms.",
     "Instant-NGP DL3DV scores use 16k training steps and must not be used to rank methods.",
-    "DL3DV proportional and uniform frontiers were declared after the balanced frontier was computed (post hoc).",
-    "In nutrition5k_nerfacto_metrics.csv, 173 retrained rows are tagged recovered-P19 together with 385 re-evaluated rows; this version does not separate them."
+    "DL3DV proportional and uniform frontiers were declared after the balanced frontier was computed (post hoc)."
   ],
   "rai:dataUseCases": [
     "Recommended: low-cost NeRF benchmark screening, ablation sanity checks, audit-protocol inspection, subset-selection research, and reproduction of packaged audit summaries when required external metric tables are available.",

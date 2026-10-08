@@ -2,12 +2,11 @@
 
 This artifact does not redistribute raw Nutrition5k-derived scene assets or full NeRF outputs unless redistribution is confirmed as permitted. The packaged files are lightweight scene lists, descriptors, labels, configs, metadata, copied CSV diagnostics, and scripts.
 
-To reproduce the full audit, users need external inputs matching the paper run:
+The audits need no external inputs: the per-scene metric tables are in `logs/` and `rebuttal/method_logs/`.
+External inputs are needed only to regenerate those metrics or the descriptors from scratch:
 
 - Raw or prepared Nutrition5k-derived scene assets for the listed `dish_id` scenes.
-- Per-scene ZipNeRF full-image metrics for the full audit population.
-- Per-scene metric tables for every additional NeRF method included in cross-method claims.
-- Any method-specific training/rendering outputs needed to regenerate those metric tables.
+- The NeRF method training/rendering runs that produce per-scene metrics.
 
 Suggested regeneration path from the source repository:
 
