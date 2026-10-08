@@ -155,15 +155,6 @@
     },
     {
       "@type": "cr:FileObject",
-      "@id": "dataset_cover_image_png",
-      "name": "Dataset cover image",
-      "description": "Kaggle dataset cover image used for the listing thumbnail and header crop.",
-      "contentUrl": "dataset-cover-image.png",
-      "encodingFormat": "image/png",
-      "sha256": "454d29e7a2ae845e6c0d191ee294be41e8c0f95003e2411d6fabc65d1f2aeb20"
-    },
-    {
-      "@type": "cr:FileObject",
       "@id": "license_txt",
       "name": "License",
       "description": "Repository license copied into the artifact package.",
@@ -179,15 +170,6 @@
       "contentUrl": "CITATION.cff",
       "encodingFormat": "text/plain",
       "sha256": "6e969a84d7c52a6bd649cd275903c9cb8189b3a0b7068674503b98123a9f7bcd"
-    },
-    {
-      "@type": "cr:FileObject",
-      "@id": "kaggle_dataset_metadata_json",
-      "name": "Kaggle dataset metadata",
-      "description": "Kaggle dataset metadata used by the Kaggle CLI.",
-      "contentUrl": "dataset-metadata.json",
-      "encodingFormat": "application/json",
-      "sha256": "d53c7adb76564cb456845c4aec21c95f94262f04430f7aa025e331700defb27f"
     },
     {
       "@type": "cr:FileObject",
@@ -439,7 +421,7 @@
       "description": "Machine-readable results, contracts, and seeds of all review-period analyses.",
       "contentUrl": "rebuttal/rebuttal_results.json",
       "encodingFormat": "application/json",
-      "sha256": "6dfeabb934dc8a415524fc9542bbcd77132af96f7af18aff9d42a92089c703ec"
+      "sha256": "7fca9cb1b9ba3165211d6b0efe942b3b4d8e40bc57dc52d335978a47a223cb2c"
     },
     {
       "@type": "cr:FileObject",

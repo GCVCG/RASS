@@ -70,8 +70,8 @@
       "source_path_or_placeholder_status": "anonymized Croissant metadata configured for neutral Kaggle account nobodyeh",
       "status": "anonymized_group_metadata",
       "required": true,
-      "sha256": "c7a20838e8423c834786aad3a4b725378b8e6aa01c51024f5bec0c81a90ddf91",
-      "size_bytes": 91039,
+      "sha256": "923004bb2e4c956925ea1ca18db0d4144d6920f683e090efda6a3f9f97102223",
+      "size_bytes": 90276,
       "contains_todo_required": false
     },
     {
@@ -330,8 +330,8 @@
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
       "required": false,
-      "sha256": "6dfeabb934dc8a415524fc9542bbcd77132af96f7af18aff9d42a92089c703ec",
-      "size_bytes": 202345,
+      "sha256": "7fca9cb1b9ba3165211d6b0efe942b3b4d8e40bc57dc52d335978a47a223cb2c",
+      "size_bytes": 202360,
       "contains_todo_required": false
     },
     {

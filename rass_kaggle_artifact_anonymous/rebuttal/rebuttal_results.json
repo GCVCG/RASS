@@ -1750,7 +1750,7 @@
     }
   },
   "E4": {
-    "description": "Regime-level fidelity: Zip-NeRF global event (paper tolerances, global KS<=0.14) AND per-regime mean constraints |mean_m(S\u2229r)-mean_m(full\u2229r)| <= c*tau_m over the six k=6 regimes, c in {1,2}. Balanced sampler on the full audit population (3521 effective scenes), budgets 48..360, M=400 at every budget (fast evaluator; no reduction needed), seed 0.",
+    "description": "Regime-level fidelity: Zip-NeRF global event (paper tolerances, global KS<=0.14) AND per-regime mean constraints |mean_m(S∩r)-mean_m(full∩r)| <= c*tau_m over the six k=6 regimes, c in {1,2}. Balanced sampler on the full audit population (3521 effective scenes), budgets 48..360, M=400 at every budget (fast evaluator; no reduction needed), seed 0.",
     "population_size": 3521,
     "tolerances": {
       "psnr": 0.5,
@@ -6226,27 +6226,27 @@
         "metrics": {
           "psnr": {
             "covered_mean": 18.822725826622037,
-            "missing_mean": NaN,
-            "gap": NaN,
-            "ks_missing_vs_covered": NaN,
+            "missing_mean": null,
+            "gap": null,
+            "ks_missing_vs_covered": null,
             "tolerance": 0.5,
             "gap_exceeds_tolerance": false,
             "ks_exceeds_guardrail": false
           },
           "ssim": {
             "covered_mean": 0.6799307079502751,
-            "missing_mean": NaN,
-            "gap": NaN,
-            "ks_missing_vs_covered": NaN,
+            "missing_mean": null,
+            "gap": null,
+            "ks_missing_vs_covered": null,
             "tolerance": 0.01,
             "gap_exceeds_tolerance": false,
             "ks_exceeds_guardrail": false
           },
           "lpips": {
             "covered_mean": 0.3411129373846509,
-            "missing_mean": NaN,
-            "gap": NaN,
-            "ks_missing_vs_covered": NaN,
+            "missing_mean": null,
+            "gap": null,
+            "ks_missing_vs_covered": null,
             "tolerance": 0.01,
             "gap_exceeds_tolerance": false,
             "ks_exceeds_guardrail": false
@@ -6261,7 +6261,7 @@
           "5": 0.18148253337120138
         },
         "regime_share_missing": {},
-        "max_regime_share_shift": NaN,
+        "max_regime_share_shift": null,
         "verdict": "NOT missing at random: missing scenes are systematically harder (lower PSNR/SSIM, higher LPIPS) and drawn from different regimes"
       },
       "bionerf": {
@@ -6270,27 +6270,27 @@
         "metrics": {
           "psnr": {
             "covered_mean": 18.822725826622037,
-            "missing_mean": NaN,
-            "gap": NaN,
-            "ks_missing_vs_covered": NaN,
+            "missing_mean": null,
+            "gap": null,
+            "ks_missing_vs_covered": null,
             "tolerance": 0.5,
             "gap_exceeds_tolerance": false,
             "ks_exceeds_guardrail": false
           },
           "ssim": {
             "covered_mean": 0.6799307079502751,
-            "missing_mean": NaN,
-            "gap": NaN,
-            "ks_missing_vs_covered": NaN,
+            "missing_mean": null,
+            "gap": null,
+            "ks_missing_vs_covered": null,
             "tolerance": 0.01,
             "gap_exceeds_tolerance": false,
             "ks_exceeds_guardrail": false
           },
           "lpips": {
             "covered_mean": 0.3411129373846509,
-            "missing_mean": NaN,
-            "gap": NaN,
-            "ks_missing_vs_covered": NaN,
+            "missing_mean": null,
+            "gap": null,
+            "ks_missing_vs_covered": null,
             "tolerance": 0.01,
             "gap_exceeds_tolerance": false,
             "ks_exceeds_guardrail": false
@@ -6305,7 +6305,7 @@
           "5": 0.18148253337120138
         },
         "regime_share_missing": {},
-        "max_regime_share_shift": NaN,
+        "max_regime_share_shift": null,
         "verdict": "NOT missing at random: missing scenes are systematically harder (lower PSNR/SSIM, higher LPIPS) and drawn from different regimes"
       }
     },
