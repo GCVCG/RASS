@@ -119,6 +119,7 @@ def main() -> int:
     expected_counts = {
         "scene_lists/rass48_scene_ids.txt": 48,
         "scene_lists/rass96_scene_ids.txt": 96,
+        "scene_lists/full_zipnerf_audit_ids.txt": 3521,  # scenes with a Zip-NeRF log and a regime label
     }
     for rel, expected in expected_counts.items():
         path = root / rel

@@ -6,7 +6,7 @@ This package is a Kaggle-ready artifact for the RASS scene-subset audit used in 
 
 - `scene_lists/rass48_scene_ids.txt`: 48 scenes for rapid screening and smoke-test style comparisons.
 - `scene_lists/rass96_scene_ids.txt`: 96 scenes for the stronger compact reporting option.
-- `scene_lists/full_zipnerf_audit_ids.txt`: the full ZipNeRF audit population available in the repository. Leaderboard-quality claims should be checked against the full audit population, not only a compact list.
+- `scene_lists/full_zipnerf_audit_ids.txt`: the 3,521-scene Zip-NeRF audit population (scenes with both a Zip-NeRF log and a regime label), the same population the audit scripts load. Leaderboard-quality claims should be checked against the full audit population, not only a compact list.
 - `scene_lists/cross_method_common_ids.txt`: scenes shared by the available cross-method tables.
 - `descriptors/`: normalized scene descriptors and k=6 regime labels copied from the source repository.
 - `results/`: saved audit frontier and cross-method diagnostic CSVs copied from existing outputs.

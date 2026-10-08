@@ -154,7 +154,7 @@
       "description": "Top-level explanation of scope, limits, validation, and reproduction steps.",
       "contentUrl": "README.md",
       "encodingFormat": "text/markdown",
-      "sha256": "a0bc5e805067274738f0a65a17a150a27642d8930b815151b9b3e9577a2b1285"
+      "sha256": "e5d0a61703ea9019c376937966bd8581210fe98bea831965a6ef40139710ba73"
     },
     {
       "@type": "cr:FileObject",
@@ -205,10 +205,10 @@
       "@type": "cr:FileObject",
       "@id": "full_zipnerf_audit_ids_txt",
       "name": "Full ZipNeRF audit scene IDs",
-      "description": "Scene identifiers for the full ZipNeRF audit population available in the repository.",
+      "description": "Scene identifiers for the 3,521-scene Zip-NeRF audit population used by every audit.",
       "contentUrl": "scene_lists/full_zipnerf_audit_ids.txt",
       "encodingFormat": "text/plain",
-      "sha256": "3fc9bcd1eb35920eb0a310804163a8362239f0d3eb153aad66a5e5ffc4a481ab"
+      "sha256": "bc34934c659261afcc25681ed01f925333aa2b652a2c6c6c488a4a3b386f1a39"
     },
     {
       "@type": "cr:FileObject",
@@ -325,7 +325,7 @@
       "description": "Validator for required files, parseable metadata, and compact list counts.",
       "contentUrl": "scripts/validate_artifact.py",
       "encodingFormat": "text/x-python",
-      "sha256": "b408c0418eb0f0409944b49c55e03c929141a4eb5a96e2c70434597a53fd6c5b"
+      "sha256": "680ff5448366ac2bb5f664d5c3707586d7d19b1bdad784027f425effa0497043"
     },
     {
       "@type": "cr:FileObject",

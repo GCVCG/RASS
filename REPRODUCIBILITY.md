@@ -44,7 +44,7 @@ Expected counts:
 
 - `48` RASS-48 IDs
 - `96` RASS-96 IDs
-- `3625` full ZipNeRF audit IDs
+- `3521` full ZipNeRF audit IDs
 - `3473` cross-method common IDs
 
 ## 3. Reproduce Packaged Summaries
