@@ -6,4 +6,4 @@ known_randomized_steps:
     seed: 0
     source_path: results/strong_accept/run_config.json
 candidate_generator_seed_rule: "numpy default_rng(seed + b), b = scenes per regime"
-nerf_training_seeds: "Outside this artifact: the audit uses only the released per-scene metrics in logs/ and rebuttal/method_logs/."
+nerf_training_seeds: "Outside this artifact: the audit uses only the released per-scene metrics in logs/ and extended/method_logs/."

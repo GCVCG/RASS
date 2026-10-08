@@ -2,7 +2,7 @@
   "artifact_name": "rass_kaggle_artifact_anonymous",
   "artifact_version": "1.1.0",
   "generated_on": "2026-10-08",
-  "provenance_note": "Version 1.1.0 for the NeurIPS 2026 camera-ready: adds review-period files and names the authors. The Kaggle owner slug nobodyeh is the account used during double-blind review.",
+  "provenance_note": "Version 1.1.0: adds the extended-audit files and names the authors. ",
   "files": [
     {
       "path": "CITATION.cff",
@@ -30,8 +30,8 @@
       "source_path_or_placeholder_status": "created/updated for anonymized package",
       "status": "copied",
       "required": true,
-      "sha256": "577e22e7ebecab0ec2c2062d99e28a9881e474ae9986520a1a3242a191664f9d",
-      "size_bytes": 4847,
+      "sha256": "a0bc5e805067274738f0a65a17a150a27642d8930b815151b9b3e9577a2b1285",
+      "size_bytes": 4818,
       "contains_todo_required": false
     },
     {
@@ -40,7 +40,7 @@
       "source_path_or_placeholder_status": "source run configuration, anonymized",
       "status": "copied",
       "required": true,
-      "sha256": "300b72af2a2bcdc848d91be9daeb997105d28a9cfe0e593a4d7f614906390fef",
+      "sha256": "b879ad5c4cf33b76c3edba10fc18f897e60c34321dfd828446bd85e4b9ef68a3",
       "size_bytes": 1246,
       "contains_todo_required": false
     },
@@ -50,7 +50,7 @@
       "source_path_or_placeholder_status": "source run configuration",
       "status": "copied",
       "required": true,
-      "sha256": "355e09d89a27e438ad61cb4176e8298932eab0102269653af7362d5b1d3a17fc",
+      "sha256": "11c4f05d62cd85b87ce6f3f0c5f122e11f9af02ad1a6dbd74da18dbe9697ba56",
       "size_bytes": 426,
       "contains_todo_required": false
     },
@@ -70,8 +70,8 @@
       "source_path_or_placeholder_status": "anonymized Croissant metadata configured for neutral Kaggle account nobodyeh",
       "status": "anonymized_group_metadata",
       "required": true,
-      "sha256": "80e1d50cc54524d88dfea1619e6e48338117bf47369f2aa5c4bc7fe1cf874b25",
-      "size_bytes": 98732,
+      "sha256": "b50a967f316a542a7931a54a7b1fbf5213b19ebd24174a2be5e3b362d673330e",
+      "size_bytes": 98748,
       "contains_todo_required": false
     },
     {
@@ -90,8 +90,8 @@
       "source_path_or_placeholder_status": "anonymized Kaggle metadata configured for neutral Kaggle account nobodyeh",
       "status": "anonymized_group_metadata",
       "required": true,
-      "sha256": "d53c7adb76564cb456845c4aec21c95f94262f04430f7aa025e331700defb27f",
-      "size_bytes": 1629,
+      "sha256": "9ad00bc9e89b72eb0e5994eaf05b46122125d512b040061e4f815a488f0e5b9e",
+      "size_bytes": 1622,
       "contains_todo_required": false
     },
     {
@@ -130,7 +130,7 @@
       "source_path_or_placeholder_status": "created for this package",
       "status": "copied",
       "required": true,
-      "sha256": "72fc854e38885a187d30e288425cc2126f4ce82decea633db777ce8404016849",
+      "sha256": "d392b5d81e94c02ca5206bfaf3250ee9f86b015c4dc51cf81fc2faefcbca7745",
       "size_bytes": 1255,
       "contains_todo_required": false
     },
@@ -140,7 +140,7 @@
       "source_path_or_placeholder_status": "converted from the source repository result tables",
       "status": "copied",
       "required": false,
-      "sha256": "d91500482d07927bd2df74cef9bd0990918cf97b8f4abdd68d4e39c30993e2ed",
+      "sha256": "733f687fcdf8cab1524ae8652ee160c9d13d8fcddeee03b3112c9d8c972ea0b1",
       "size_bytes": 1232,
       "contains_todo_required": false
     },
@@ -190,12 +190,12 @@
       "source_path_or_placeholder_status": "created/updated for anonymized package",
       "status": "copied",
       "required": true,
-      "sha256": "76059f5684827337d2401fad6bc7a46a87c8287896429c3a84119a769a3dff13",
-      "size_bytes": 1988,
+      "sha256": "93f24ab7d9f669e983872830f96e9d2610b42e317e62a7cc49e6be05f61010e6",
+      "size_bytes": 1989,
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/dl3dv_audit_card.json",
+      "path": "extended/dl3dv_audit_card.json",
       "purpose": "DL3DV audit card with disclosures (CC BY-NC 4.0).",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -205,7 +205,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/dl3dv_contract_declaration.json",
+      "path": "extended/dl3dv_contract_declaration.json",
       "purpose": "Timestamped DL3DV audit contract and the labeled post-hoc additions (CC BY-NC 4.0).",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -215,7 +215,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/event_configs/dispersion_matched_v1.json",
+      "path": "extended/event_configs/dispersion_matched_v1.json",
       "purpose": "Versioned audit-event configuration.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -225,7 +225,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/event_configs/fivemethod_v1.json",
+      "path": "extended/event_configs/fivemethod_v1.json",
       "purpose": "Versioned audit-event configuration.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -235,7 +235,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/event_configs/fivemethod_v2.json",
+      "path": "extended/event_configs/fivemethod_v2.json",
       "purpose": "Versioned audit-event configuration.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -245,7 +245,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/event_configs/fourmethod_v1.json",
+      "path": "extended/event_configs/fourmethod_v1.json",
       "purpose": "Versioned audit-event configuration.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -255,7 +255,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/event_configs/fourmethod_v2.json",
+      "path": "extended/event_configs/fourmethod_v2.json",
       "purpose": "Versioned audit-event configuration.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -265,7 +265,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/event_configs/ranking_variantA_v1.json",
+      "path": "extended/event_configs/ranking_variantA_v1.json",
       "purpose": "Versioned audit-event configuration.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -275,7 +275,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/event_configs/ranking_variantB_v1.json",
+      "path": "extended/event_configs/ranking_variantB_v1.json",
       "purpose": "Versioned audit-event configuration.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -285,7 +285,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/event_configs/regime_constrained_c1_v1.json",
+      "path": "extended/event_configs/regime_constrained_c1_v1.json",
       "purpose": "Versioned audit-event configuration.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -295,7 +295,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/event_configs/regime_constrained_c2_v1.json",
+      "path": "extended/event_configs/regime_constrained_c2_v1.json",
       "purpose": "Versioned audit-event configuration.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -305,7 +305,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/event_configs/threemethod_equal_v1.json",
+      "path": "extended/event_configs/threemethod_equal_v1.json",
       "purpose": "Versioned audit-event configuration.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -315,7 +315,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/event_configs/threemethod_proportional_v1.json",
+      "path": "extended/event_configs/threemethod_proportional_v1.json",
       "purpose": "Versioned audit-event configuration.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -325,17 +325,17 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/method_logs/README.md",
-      "purpose": "Provenance and licensing of the review-period method logs.",
+      "path": "extended/method_logs/README.md",
+      "purpose": "Provenance and licensing of the additional method logs.",
       "source_path_or_placeholder_status": "generated for v1.1.0",
       "status": "generated",
       "required": false,
-      "sha256": "93f343c225a33c43b2b8fc2bdcb1cb2a2873fa2906d0662f8f556824f06df0fd",
-      "size_bytes": 1907,
+      "sha256": "9841bb7b46e676ad53c7adc66b7dce18a273788e103cafe16544cf274dfbc4a0",
+      "size_bytes": 1910,
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/method_logs/dl3dv_descriptors.csv",
+      "path": "extended/method_logs/dl3dv_descriptors.csv",
       "purpose": "Per-scene descriptors of the 140 DL3DV-Benchmark scenes (CC BY-NC 4.0).",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -345,7 +345,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/method_logs/dl3dv_metrics.csv",
+      "path": "extended/method_logs/dl3dv_metrics.csv",
       "purpose": "Per-scene metrics of four methods on the 140 DL3DV-Benchmark scenes (CC BY-NC 4.0).",
       "source_path_or_placeholder_status": "generated for v1.1.0",
       "status": "generated",
@@ -355,7 +355,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/method_logs/nutrition5k_bionerf_metrics.csv",
+      "path": "extended/method_logs/nutrition5k_bionerf_metrics.csv",
       "purpose": "Per-scene BioNeRF (fine network) PSNR/SSIM/LPIPS on Nutrition5k-derived scenes, with a provenance note column.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -365,7 +365,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/method_logs/nutrition5k_nerfacto_metrics.csv",
+      "path": "extended/method_logs/nutrition5k_nerfacto_metrics.csv",
       "purpose": "Per-scene nerfacto PSNR/SSIM/LPIPS on 3,521 Nutrition5k-derived scenes, with a provenance note column.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -375,8 +375,8 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/rebuttal_results.json",
-      "purpose": "Machine-readable results, contracts, and seeds of all review-period analyses.",
+      "path": "extended/extended_results.json",
+      "purpose": "Machine-readable results, contracts, and seeds of the extended audits.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
       "required": false,
@@ -385,7 +385,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/selection_artifacts/budget_recommendation.json",
+      "path": "extended/selection_artifacts/budget_recommendation.json",
       "purpose": "Recorded selection-time rule that fixed RASS-48.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -395,7 +395,7 @@
       "contains_todo_required": false
     },
     {
-      "path": "rebuttal/selection_artifacts/budget_sweep_summary.csv",
+      "path": "extended/selection_artifacts/budget_sweep_summary.csv",
       "purpose": "Recorded selection-time sweep summary.",
       "source_path_or_placeholder_status": "copied from source repository",
       "status": "copied",
@@ -510,7 +510,7 @@
       "source_path_or_placeholder_status": "created for this package",
       "status": "implemented",
       "required": true,
-      "sha256": "a13756c3da2200881c5683369da5704816253de49d561af806d5e68ad6a387c7",
+      "sha256": "33f81169c23f3b492d6dab4ab93dab3c2c043bb165ee34c04e877ff2d2491f2c",
       "size_bytes": 2149,
       "contains_todo_required": false
     },

@@ -86,7 +86,7 @@
     "https://www.gnu.org/licenses/gpl-3.0.html",
     "https://creativecommons.org/licenses/by-nc/4.0/"
   ],
-  "usageInfo": "Code, scene lists, descriptors, configurations, and Nutrition5k-derived result tables are released under GPL-3.0 (LICENSE). Files derived from DL3DV-10K (rebuttal/method_logs/dl3dv_metrics.csv, rebuttal/method_logs/dl3dv_descriptors.csv, rebuttal/dl3dv_contract_declaration.json, rebuttal/dl3dv_audit_card.json) are released under CC BY-NC 4.0 for non-commercial research with attribution to DL3DV-10K; no DL3DV images or inputs are redistributed. Raw Nutrition5k-derived scenes and full NeRF outputs are not redistributed and remain governed by their upstream terms.",
+  "usageInfo": "Code, scene lists, descriptors, configurations, and Nutrition5k-derived result tables are released under GPL-3.0 (LICENSE). Files derived from DL3DV-10K (extended/method_logs/dl3dv_metrics.csv, extended/method_logs/dl3dv_descriptors.csv, extended/dl3dv_contract_declaration.json, extended/dl3dv_audit_card.json) are released under CC BY-NC 4.0 for non-commercial research with attribution to DL3DV-10K; no DL3DV images or inputs are redistributed. Raw Nutrition5k-derived scenes and full NeRF outputs are not redistributed and remain governed by their upstream terms.",
   "creator": [
     {
       "@type": "sc:Person",
@@ -154,7 +154,7 @@
       "description": "Top-level explanation of scope, limits, validation, and reproduction steps.",
       "contentUrl": "README.md",
       "encodingFormat": "text/markdown",
-      "sha256": "577e22e7ebecab0ec2c2062d99e28a9881e474ae9986520a1a3242a191664f9d"
+      "sha256": "a0bc5e805067274738f0a65a17a150a27642d8930b815151b9b3e9577a2b1285"
     },
     {
       "@type": "cr:FileObject",
@@ -181,7 +181,7 @@
       "description": "Dataset card covering intended use, limitations, and external data requirements.",
       "contentUrl": "metadata/dataset_card.md",
       "encodingFormat": "text/markdown",
-      "sha256": "76059f5684827337d2401fad6bc7a46a87c8287896429c3a84119a769a3dff13"
+      "sha256": "93f24ab7d9f669e983872830f96e9d2610b42e317e62a7cc49e6be05f61010e6"
     },
     {
       "@type": "cr:FileObject",
@@ -262,7 +262,7 @@
       "description": "Known audit seeds and trial counts copied from the source run configuration.",
       "contentUrl": "configs/seeds.yaml",
       "encodingFormat": "application/x-yaml",
-      "sha256": "355e09d89a27e438ad61cb4176e8298932eab0102269653af7362d5b1d3a17fc"
+      "sha256": "11c4f05d62cd85b87ce6f3f0c5f122e11f9af02ad1a6dbd74da18dbe9697ba56"
     },
     {
       "@type": "cr:FileObject",
@@ -271,7 +271,7 @@
       "description": "High-level audit settings and external-input requirements.",
       "contentUrl": "configs/audit_settings.yaml",
       "encodingFormat": "application/x-yaml",
-      "sha256": "300b72af2a2bcdc848d91be9daeb997105d28a9cfe0e593a4d7f614906390fef"
+      "sha256": "b879ad5c4cf33b76c3edba10fc18f897e60c34321dfd828446bd85e4b9ef68a3"
     },
     {
       "@type": "cr:FileObject",
@@ -316,7 +316,7 @@
       "description": "Reproduces the frontier and the RASS-48/96 export audits and regenerates RASS-96.",
       "contentUrl": "scripts/reproduce_tables.py",
       "encodingFormat": "text/x-python",
-      "sha256": "a13756c3da2200881c5683369da5704816253de49d561af806d5e68ad6a387c7"
+      "sha256": "33f81169c23f3b492d6dab4ab93dab3c2c043bb165ee34c04e877ff2d2491f2c"
     },
     {
       "@type": "cr:FileObject",
@@ -352,14 +352,14 @@
       "description": "Instructions for obtaining or regenerating raw Nutrition5k-derived assets and full NeRF outputs when permitted.",
       "contentUrl": "external_data/README_how_to_obtain_or_regenerate_inputs.md",
       "encodingFormat": "text/markdown",
-      "sha256": "72fc854e38885a187d30e288425cc2126f4ce82decea633db777ce8404016849"
+      "sha256": "d392b5d81e94c02ca5206bfaf3250ee9f86b015c4dc51cf81fc2faefcbca7745"
     },
     {
       "@type": "cr:FileObject",
       "@id": "nerfacto_n5k_csv",
       "name": "nerfacto Nutrition5k metrics",
       "description": "Per-scene nerfacto PSNR/SSIM/LPIPS on 3,521 Nutrition5k-derived scenes, with a provenance note column.",
-      "contentUrl": "rebuttal/method_logs/nutrition5k_nerfacto_metrics.csv",
+      "contentUrl": "extended/method_logs/nutrition5k_nerfacto_metrics.csv",
       "encodingFormat": "text/csv",
       "sha256": "86d38e764cea43a71578b13db1fa9ff91788f93583f72a7d573ed09b2c8d9189"
     },
@@ -368,7 +368,7 @@
       "@id": "bionerf_n5k_csv",
       "name": "BioNeRF Nutrition5k metrics",
       "description": "Per-scene BioNeRF (fine network) PSNR/SSIM/LPIPS on Nutrition5k-derived scenes, with a provenance note column.",
-      "contentUrl": "rebuttal/method_logs/nutrition5k_bionerf_metrics.csv",
+      "contentUrl": "extended/method_logs/nutrition5k_bionerf_metrics.csv",
       "encodingFormat": "text/csv",
       "sha256": "23d02922e0715f4d5627c8a1c1127c0d7b508070f9f397400b915c2ef7fa132d"
     },
@@ -377,7 +377,7 @@
       "@id": "dl3dv_metrics_csv",
       "name": "DL3DV metrics",
       "description": "Per-scene metrics of four methods on the 140 DL3DV-Benchmark scenes (CC BY-NC 4.0).",
-      "contentUrl": "rebuttal/method_logs/dl3dv_metrics.csv",
+      "contentUrl": "extended/method_logs/dl3dv_metrics.csv",
       "encodingFormat": "text/csv",
       "sha256": "41a92c0d3c94c6b82a568bfb05c9606264463df9f96147977caba6231bcbb37e"
     },
@@ -386,7 +386,7 @@
       "@id": "dl3dv_descriptors_csv",
       "name": "DL3DV descriptors",
       "description": "Per-scene descriptors of the 140 DL3DV-Benchmark scenes (CC BY-NC 4.0).",
-      "contentUrl": "rebuttal/method_logs/dl3dv_descriptors.csv",
+      "contentUrl": "extended/method_logs/dl3dv_descriptors.csv",
       "encodingFormat": "text/csv",
       "sha256": "691f8deedf63f3c2addb2cb48e7d92d43cd1a32e2c6018aa6be81f48fce4c254"
     },
@@ -394,17 +394,17 @@
       "@type": "cr:FileObject",
       "@id": "method_logs_readme",
       "name": "Method-log README",
-      "description": "Provenance and licensing of the review-period method logs.",
-      "contentUrl": "rebuttal/method_logs/README.md",
+      "description": "Provenance and licensing of the additional method logs.",
+      "contentUrl": "extended/method_logs/README.md",
       "encodingFormat": "text/markdown",
-      "sha256": "93f343c225a33c43b2b8fc2bdcb1cb2a2873fa2906d0662f8f556824f06df0fd"
+      "sha256": "9841bb7b46e676ad53c7adc66b7dce18a273788e103cafe16544cf274dfbc4a0"
     },
     {
       "@type": "cr:FileObject",
       "@id": "dl3dv_contract_json",
       "name": "DL3DV contract declaration",
       "description": "Timestamped DL3DV audit contract and the labeled post-hoc additions (CC BY-NC 4.0).",
-      "contentUrl": "rebuttal/dl3dv_contract_declaration.json",
+      "contentUrl": "extended/dl3dv_contract_declaration.json",
       "encodingFormat": "application/json",
       "sha256": "19147afd02ade875cfbd0cdddd6207fbcd9e31517108b9f1e27c4804f5b54b50"
     },
@@ -413,16 +413,16 @@
       "@id": "dl3dv_audit_card_json",
       "name": "DL3DV audit card",
       "description": "DL3DV audit card with disclosures (CC BY-NC 4.0).",
-      "contentUrl": "rebuttal/dl3dv_audit_card.json",
+      "contentUrl": "extended/dl3dv_audit_card.json",
       "encodingFormat": "application/json",
       "sha256": "3f4b80485fd9653a432a7f85d0f1aebdfcff839fc80a5022dfabe99479e24478"
     },
     {
       "@type": "cr:FileObject",
-      "@id": "rebuttal_results_json",
-      "name": "Review-period results",
-      "description": "Machine-readable results, contracts, and seeds of all review-period analyses.",
-      "contentUrl": "rebuttal/rebuttal_results.json",
+      "@id": "extended_results_json",
+      "name": "Extended audit results",
+      "description": "Machine-readable results, contracts, and seeds of the extended audits.",
+      "contentUrl": "extended/extended_results.json",
       "encodingFormat": "application/json",
       "sha256": "7fca9cb1b9ba3165211d6b0efe942b3b4d8e40bc57dc52d335978a47a223cb2c"
     },
@@ -431,7 +431,7 @@
       "@id": "budget_recommendation_json",
       "name": "Selection-time budget recommendation",
       "description": "Recorded selection-time rule that fixed RASS-48.",
-      "contentUrl": "rebuttal/selection_artifacts/budget_recommendation.json",
+      "contentUrl": "extended/selection_artifacts/budget_recommendation.json",
       "encodingFormat": "application/json",
       "sha256": "48faa7c3616de0d7f31da14ff496cb0feea1feddd3f93a1d4a56f9992a6682af"
     },
@@ -440,7 +440,7 @@
       "@id": "budget_sweep_summary_csv",
       "name": "Selection-time budget sweep",
       "description": "Recorded selection-time sweep summary.",
-      "contentUrl": "rebuttal/selection_artifacts/budget_sweep_summary.csv",
+      "contentUrl": "extended/selection_artifacts/budget_sweep_summary.csv",
       "encodingFormat": "text/csv",
       "sha256": "ca1d8e2a032673d28e5cf18cb56f795585be4c354d616080c0386fe86c86e34b"
     },
@@ -467,7 +467,7 @@
       "@id": "event_config_dispersion_matched_v1",
       "name": "Event config dispersion_matched_v1",
       "description": "Versioned audit-event configuration.",
-      "contentUrl": "rebuttal/event_configs/dispersion_matched_v1.json",
+      "contentUrl": "extended/event_configs/dispersion_matched_v1.json",
       "encodingFormat": "application/json",
       "sha256": "7d5c53a77b3c06403cb709579b5bbd0a4345b119874eb60f43ab01337615c15a"
     },
@@ -476,7 +476,7 @@
       "@id": "event_config_fivemethod_v1",
       "name": "Event config fivemethod_v1",
       "description": "Versioned audit-event configuration.",
-      "contentUrl": "rebuttal/event_configs/fivemethod_v1.json",
+      "contentUrl": "extended/event_configs/fivemethod_v1.json",
       "encodingFormat": "application/json",
       "sha256": "8bb850fe9e1aa3bfb250f320804caf98da5af055bf562dfd1567b13bda321c7a"
     },
@@ -485,7 +485,7 @@
       "@id": "event_config_fivemethod_v2",
       "name": "Event config fivemethod_v2",
       "description": "Versioned audit-event configuration.",
-      "contentUrl": "rebuttal/event_configs/fivemethod_v2.json",
+      "contentUrl": "extended/event_configs/fivemethod_v2.json",
       "encodingFormat": "application/json",
       "sha256": "0095561f35163a7c52517ccaa8d9b7ae40a816e26db17483247c613cb307d872"
     },
@@ -494,7 +494,7 @@
       "@id": "event_config_fourmethod_v1",
       "name": "Event config fourmethod_v1",
       "description": "Versioned audit-event configuration.",
-      "contentUrl": "rebuttal/event_configs/fourmethod_v1.json",
+      "contentUrl": "extended/event_configs/fourmethod_v1.json",
       "encodingFormat": "application/json",
       "sha256": "4c59a6d7edd909d055a3c9084912150c099cabb23f2229da60c35e3ecb2b0d89"
     },
@@ -503,7 +503,7 @@
       "@id": "event_config_fourmethod_v2",
       "name": "Event config fourmethod_v2",
       "description": "Versioned audit-event configuration.",
-      "contentUrl": "rebuttal/event_configs/fourmethod_v2.json",
+      "contentUrl": "extended/event_configs/fourmethod_v2.json",
       "encodingFormat": "application/json",
       "sha256": "6e9e4180041f54fea4c0a1d306d35bf6b1115d6746bdf482c67cab18b647b503"
     },
@@ -512,7 +512,7 @@
       "@id": "event_config_ranking_variantA_v1",
       "name": "Event config ranking_variantA_v1",
       "description": "Versioned audit-event configuration.",
-      "contentUrl": "rebuttal/event_configs/ranking_variantA_v1.json",
+      "contentUrl": "extended/event_configs/ranking_variantA_v1.json",
       "encodingFormat": "application/json",
       "sha256": "e1c4887eae945ac7da71048540d380b929f01f3d92f6fa96ea35d2338d640ff3"
     },
@@ -521,7 +521,7 @@
       "@id": "event_config_ranking_variantB_v1",
       "name": "Event config ranking_variantB_v1",
       "description": "Versioned audit-event configuration.",
-      "contentUrl": "rebuttal/event_configs/ranking_variantB_v1.json",
+      "contentUrl": "extended/event_configs/ranking_variantB_v1.json",
       "encodingFormat": "application/json",
       "sha256": "340885ba599397367c58be4662eaa4df19c93d6429cd72ca6af1c2157bbf07f3"
     },
@@ -530,7 +530,7 @@
       "@id": "event_config_regime_constrained_c1_v1",
       "name": "Event config regime_constrained_c1_v1",
       "description": "Versioned audit-event configuration.",
-      "contentUrl": "rebuttal/event_configs/regime_constrained_c1_v1.json",
+      "contentUrl": "extended/event_configs/regime_constrained_c1_v1.json",
       "encodingFormat": "application/json",
       "sha256": "e643953373ac63f09bf3ce85f097b45b288cd2bbcceb90b6ed8739b9b653b98d"
     },
@@ -539,7 +539,7 @@
       "@id": "event_config_regime_constrained_c2_v1",
       "name": "Event config regime_constrained_c2_v1",
       "description": "Versioned audit-event configuration.",
-      "contentUrl": "rebuttal/event_configs/regime_constrained_c2_v1.json",
+      "contentUrl": "extended/event_configs/regime_constrained_c2_v1.json",
       "encodingFormat": "application/json",
       "sha256": "bcab7eab1d85a0c2fae3b3b706efcb9e0a1b2a000498b9c62bfbd70f8d7dc958"
     },
@@ -548,7 +548,7 @@
       "@id": "event_config_threemethod_equal_v1",
       "name": "Event config threemethod_equal_v1",
       "description": "Versioned audit-event configuration.",
-      "contentUrl": "rebuttal/event_configs/threemethod_equal_v1.json",
+      "contentUrl": "extended/event_configs/threemethod_equal_v1.json",
       "encodingFormat": "application/json",
       "sha256": "3213aecb9efa000a246d8c537ff1652a81e3bac25e14bae5ab37f3d6a6b16f0d"
     },
@@ -557,7 +557,7 @@
       "@id": "event_config_threemethod_proportional_v1",
       "name": "Event config threemethod_proportional_v1",
       "description": "Versioned audit-event configuration.",
-      "contentUrl": "rebuttal/event_configs/threemethod_proportional_v1.json",
+      "contentUrl": "extended/event_configs/threemethod_proportional_v1.json",
       "encodingFormat": "application/json",
       "sha256": "408c544a91a9baf40e90e2914ecfe276746b5a9e09bbec9dee7d8c60501dbb4c"
     },
@@ -1883,7 +1883,7 @@
           "@type": "cr:Field",
           "@id": "nerfacto_n5k_metrics/note",
           "name": "note",
-          "description": "Provenance note for rows added in the review period.",
+          "description": "Provenance note for rows added when coverage was completed.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -1966,7 +1966,7 @@
           "@type": "cr:Field",
           "@id": "bionerf_n5k_metrics/note",
           "name": "note",
-          "description": "Provenance note for rows added in the review period.",
+          "description": "Provenance note for rows added when coverage was completed.",
           "dataType": "sc:Text",
           "source": {
             "fileObject": {
@@ -2652,7 +2652,7 @@
   "rai:dataAnnotationAnalysis": [
     "Annotator disagreement analysis is not applicable because no new human annotations were collected. Quality control consists of structural validation, checksum manifesting, scene-list count checks, parse checks, and reproducibility notes."
   ],
-  "rai:dataReleaseMaintenancePlan": "Version 1.1.0 (2026-10-08) adds the review-period analyses of the NeurIPS 2026 camera-ready paper to version 1.0.0 (2026-05-05), which is unchanged in content. Later corrections are released as new versions with an updated dateModified field and documented in README.md and the source repository.",
+  "rai:dataReleaseMaintenancePlan": "Version 1.1.0 (2026-10-08) adds the multi-method, sensitivity, and transfer audits of the NeurIPS 2026 paper to version 1.0.0 (2026-05-05), which is unchanged in content. Later corrections are released as new versions with an updated dateModified field and documented in README.md and the source repository.",
   "rai:personalSensitiveInformation": [
     "The released tabular artifact does not intentionally include personal or sensitive information. It contains scene identifiers, descriptor values, subset membership, method names, configuration metadata, and aggregate or per-scene benchmark identifiers.",
     "Underlying Nutrition5k-derived raw data may be subject to its own privacy, licensing, or usage conditions. Users must consult and follow original source-data terms before accessing or redistributing raw assets."

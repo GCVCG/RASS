@@ -18,8 +18,8 @@ metric_tables:
   feature_splatting: logs/nutrition5k_feature_splatting_metrics.csv
   instant_ngp_full_image: logs/nutrition5k_instant_ngp_full_image_metrics.csv
   instant_ngp_object_centric: logs/nutrition5k_instant_ngp_object_centric_metrics.csv
-  nerfacto: rebuttal/method_logs/nutrition5k_nerfacto_metrics.csv
-  bionerf: rebuttal/method_logs/nutrition5k_bionerf_metrics.csv
+  nerfacto: extended/method_logs/nutrition5k_nerfacto_metrics.csv
+  bionerf: extended/method_logs/nutrition5k_bionerf_metrics.csv
 raw_scene_assets: "Not redistributed; obtain Nutrition5k under its own terms and regenerate scenes with Pre-NeRF 360 (see external_data/)."
 copied_results:
   audit_frontier: results/audit_frontier.csv

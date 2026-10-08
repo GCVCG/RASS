@@ -2,7 +2,7 @@
 
 This artifact does not redistribute raw Nutrition5k-derived scene assets or full NeRF outputs unless redistribution is confirmed as permitted. The packaged files are lightweight scene lists, descriptors, labels, configs, metadata, copied CSV diagnostics, and scripts.
 
-The audits need no external inputs: the per-scene metric tables are in `logs/` and `rebuttal/method_logs/`.
+The audits need no external inputs: the per-scene metric tables are in `logs/` and `extended/method_logs/`.
 External inputs are needed only to regenerate those metrics or the descriptors from scratch:
 
 - Raw or prepared Nutrition5k-derived scene assets for the listed `dish_id` scenes.

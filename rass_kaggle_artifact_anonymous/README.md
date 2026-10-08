@@ -50,27 +50,27 @@ python scripts/compute_wilson_lcb.py --successes 113 --trials 400
 ```
 
 RASS-96 is the export-rule output of the audit (smallest joint objective among passing candidates at 96 scenes).
-RASS-48 is the recommended subset of the recorded selection-time sweep (`rebuttal/selection_artifacts/`), whose event
+RASS-48 is the recommended subset of the recorded selection-time sweep (`extended/selection_artifacts/`), whose event
 also included cross-method gap terms; it is released as a fixed list and passes the audit above.
 
-## Review-Period Additions (v1.1.0)
+## Extended Audits (v1.1.0)
 
-These files support the analyses added to the NeurIPS 2026 camera-ready paper; paths mirror the source repository.
+These files support the multi-method, sensitivity, and transfer audits of the paper (Sec. 5.5 and the appendix).
 
-- `rebuttal/event_configs/`: versioned audit-event configurations (multi-method, ranking, dispersion-matched,
+- `extended/event_configs/`: versioned audit-event configurations (multi-method, ranking, dispersion-matched,
   regime-constrained). The `_v2` four- and five-method configs use the full 3,473-scene intersection and supersede `_v1`.
-- `rebuttal/method_logs/`: completed nerfacto and BioNeRF logs on Nutrition5k and DL3DV per-scene metrics for four
-  methods; provenance and licensing are in `rebuttal/method_logs/README.md`.
-- `rebuttal/dl3dv_contract_declaration.json`, `rebuttal/dl3dv_audit_card.json`: DL3DV audit contract and disclosures.
-- `rebuttal/selection_artifacts/`: the recorded selection-time rule that fixed RASS-48.
+- `extended/method_logs/`: completed nerfacto and BioNeRF logs on Nutrition5k and DL3DV per-scene metrics for four
+  methods; provenance and licensing are in `extended/method_logs/README.md`.
+- `extended/dl3dv_contract_declaration.json`, `extended/dl3dv_audit_card.json`: DL3DV audit contract and disclosures.
+- `extended/selection_artifacts/`: the recorded selection-time rule that fixed RASS-48.
 - `subsets/fl36/`: FL-36', a provenance-labeled reimplementation of the facility-location baseline.
-- `rebuttal/rebuttal_results.json`: machine-readable results, contracts, and seeds.
+- `extended/extended_results.json`: machine-readable results, contracts, and seeds.
 
-Erratum: one of the 3,522 validated scenes has no Zip-NeRF metric entry, so the effective audit population is 3,521.
+One of the 3,522 validated scenes has no Zip-NeRF metric entry, so the audit population is 3,521.
 
 ## License
 
-GPL-3.0 (`LICENSE`), except the DL3DV-derived files listed in `rebuttal/method_logs/README.md`, which are released under
+GPL-3.0 (`LICENSE`), except the DL3DV-derived files listed in `extended/method_logs/README.md`, which are released under
 CC BY-NC 4.0 with attribution to DL3DV-10K.
 
 ## Citation

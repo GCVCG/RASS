@@ -1,9 +1,9 @@
-# Review-period per-scene method logs (artifact v1.1.0)
+# Additional per-scene method logs (artifact v1.1.0)
 
 - `nutrition5k_nerfacto_metrics.csv`, `nutrition5k_bionerf_metrics.csv`: per-scene PSNR/SSIM/LPIPS on the
   Nutrition5k-derived scenes (BioNeRF: fine-network metrics). Both cover 3,521 of the 3,522 validated scenes;
   `dish_1563900172` is permanently excluded because a truncated source image prevents pose generation.
-  The `note` column records provenance of rows added in the 2026 review period:
+  The `note` column records the provenance of rows added when coverage was completed:
   - BioNeRF: `recovered-P19` (997 rows; original checkpoints re-evaluated in the original container) and
     `retrained-P19` (3 rows; no checkpoint survived, retrained with the same configuration and seed).
   - nerfacto: `recovered-P19` (385 rows; original checkpoints re-evaluated) and `retrained-P19` (173 rows; no

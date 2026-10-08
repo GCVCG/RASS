@@ -24,7 +24,7 @@ RASS does not certify arbitrary same-size subsets, regime-level fidelity, cross-
 - k=6 regime labels copied from the source repository.
 - Existing audit frontier and cross-method diagnostic CSVs.
 - Metadata, configs, validation code, Wilson LCB code, and reproduction stubs.
-- Version 1.1.0: completed nerfacto/BioNeRF logs, DL3DV per-scene metrics for four methods, event configurations, FL-36', and review-period results (see README.md).
+- Version 1.1.0: completed nerfacto/BioNeRF logs, DL3DV per-scene metrics for four methods, event configurations, FL-36', and extended audit results (see README.md).
 
 ## External Data
 
@@ -32,4 +32,4 @@ Raw Nutrition5k-derived assets and full NeRF outputs are not redistributed here 
 
 ## License
 
-GPL-3.0, except DL3DV-derived files, which are CC BY-NC 4.0 (see rebuttal/method_logs/README.md). Upstream raw-data and external model-output licensing may impose separate requirements.
+GPL-3.0, except DL3DV-derived files, which are CC BY-NC 4.0 (see extended/method_logs/README.md). Upstream raw-data and external model-output licensing may impose separate requirements.

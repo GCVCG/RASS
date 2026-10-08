@@ -17,9 +17,6 @@ Kaggle artifact (version 1.1.0, Croissant metadata in `croissant.json`):
 https://www.kaggle.com/datasets/nobodyeh/rass-nerf-benchmark-artifact
 ```
 
-The Kaggle account slug `nobodyeh` and the GitHub slug `nobody-eh` are the
-accounts used during double-blind review.
-
 ## What To Use
 
 - `rass_kaggle_artifact_anonymous/`: Kaggle-ready anonymous artifact package.
@@ -115,16 +112,17 @@ than inventing metrics, scene IDs, or scientific results.
 The artifact package is the review-safe entry point. Historical source scripts
 may preserve older internal names or assumptions from earlier experiments.
 
-## Review-Period Artifacts (Camera-Ready Additions)
+## Extended Audits
 
-The `rebuttal/` directory holds the NeurIPS 2026 discussion-period audit
-artifacts: `rebuttal_results.json` (one key per task, all seeds recorded),
+The `rebuttal/` directory holds the multi-method, sensitivity, and transfer audit
+artifacts of the paper: `rebuttal_results.json` (one key per task, all seeds recorded),
 per-task summaries in `rebuttal/summaries/`, versioned event configurations in
 `rebuttal/event_configs/` (schema `rass-event-config/1.0`), the DL3DV audit
 card and contract-declaration package, and the FL-36′ reimplementation
 artifacts in `subsets/fl36/`. The `_v2` four- and five-method event configs use
 the full 3,473-scene cross-method intersection and supersede `_v1`. The same
-files ship in Kaggle artifact version 1.1.0 under the same paths.
+files ship in Kaggle artifact version 1.1.0 under `extended/` (results in
+`extended/extended_results.json`).
 
 **Completed nerfacto and BioNeRF logs.** Both methods now cover 3,521 of the
 3,522 scenes (`rebuttal/method_logs/`); every added row carries a provenance

@@ -12,6 +12,6 @@ These are the per-scene metrics from which every Nutrition5k audit in the paper 
 The formal audit population is the 3,521 scenes that have both a Zip-NeRF entry and a k=6 regime label
 (`descriptors/regime_labels.csv`). Instant-NGP reports no LPIPS. An earlier 3-decimal export of the Instant-NGP
 full-image table had 3,525 rows (4 scenes outside the audit population); on shared scenes it equals this table up to
-rounding. nerfacto and BioNeRF logs are in `rebuttal/method_logs/`.
+rounding. nerfacto and BioNeRF logs are in `extended/method_logs/`.
 
 Only metrics are released; no images, renderings, or checkpoints. License: GPL-3.0 (see `LICENSE`).
