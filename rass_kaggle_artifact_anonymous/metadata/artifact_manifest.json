@@ -10,8 +10,8 @@
       "source_path_or_placeholder_status": "anonymized placeholder citation metadata",
       "status": "copied",
       "required": true,
-      "sha256": "6e969a84d7c52a6bd649cd275903c9cb8189b3a0b7068674503b98123a9f7bcd",
-      "size_bytes": 1390,
+      "sha256": "16c14828d054aed698262843863a7cbcede66515ac94ecbf0dee497973893551",
+      "size_bytes": 1386,
       "contains_todo_required": false
     },
     {
@@ -70,8 +70,8 @@
       "source_path_or_placeholder_status": "anonymized Croissant metadata configured for neutral Kaggle account nobodyeh",
       "status": "anonymized_group_metadata",
       "required": true,
-      "sha256": "b50a967f316a542a7931a54a7b1fbf5213b19ebd24174a2be5e3b362d673330e",
-      "size_bytes": 98748,
+      "sha256": "c3c57e1e9cafac076cc688a71e0d94d796f151fb094afabca6527dcb8be5c6d4",
+      "size_bytes": 98744,
       "contains_todo_required": false
     },
     {

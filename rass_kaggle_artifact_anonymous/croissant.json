@@ -75,7 +75,7 @@
   ],
   "url": "https://www.kaggle.com/datasets/nobodyeh/rass-nerf-benchmark-artifact",
   "sameAs": [
-    "https://github.com/nobody-eh/RASS"
+    "https://github.com/GCVCG/RASS"
   ],
   "version": "1.1.0",
   "isLiveDataset": false,
@@ -172,7 +172,7 @@
       "description": "Citation metadata for the paper/artifact, with remaining archival fields handled in the CFF file.",
       "contentUrl": "CITATION.cff",
       "encodingFormat": "text/plain",
-      "sha256": "6e969a84d7c52a6bd649cd275903c9cb8189b3a0b7068674503b98123a9f7bcd"
+      "sha256": "16c14828d054aed698262843863a7cbcede66515ac94ecbf0dee497973893551"
     },
     {
       "@type": "cr:FileObject",

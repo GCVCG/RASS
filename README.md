@@ -8,7 +8,7 @@ risk-audited NeRF benchmark scene lists and reproduction metadata.
 Canonical repository location:
 
 ```text
-https://github.com/nobody-eh/RASS
+https://github.com/GCVCG/RASS
 ```
 
 Kaggle artifact (version 1.1.0, Croissant metadata in `croissant.json`):
