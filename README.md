@@ -14,7 +14,7 @@ https://github.com/GCVCG/RASS
 Kaggle artifact (version 1.1.0, Croissant metadata in `croissant.json`):
 
 ```text
-https://www.kaggle.com/datasets/nobodyeh/rass-nerf-benchmark-artifact
+https://www.kaggle.com/datasets/ahmadalmughrabi/rass-nerf-benchmark-artifact
 ```
 
 ## What To Use

@@ -10,8 +10,8 @@
       "source_path_or_placeholder_status": "anonymized placeholder citation metadata",
       "status": "copied",
       "required": true,
-      "sha256": "16c14828d054aed698262843863a7cbcede66515ac94ecbf0dee497973893551",
-      "size_bytes": 1386,
+      "sha256": "9e1f7584f1ac7b02ae0938fdc50f7ffd958b6e2af9b55ba454bc6fe353823ab2",
+      "size_bytes": 1393,
       "contains_todo_required": false
     },
     {
@@ -66,12 +66,12 @@
     },
     {
       "path": "croissant.json",
-      "purpose": "Anonymized Croissant and Croissant RAI-style metadata aligned to packaged RASS files and RAI checker requirements.",
-      "source_path_or_placeholder_status": "anonymized Croissant metadata configured for neutral Kaggle account nobodyeh",
-      "status": "anonymized_group_metadata",
+      "purpose": "Croissant metadata with Responsible AI fields, aligned to the packaged RASS files.",
+      "source_path_or_placeholder_status": "generated for v1.1.0; hosted at ahmadalmughrabi/rass-nerf-benchmark-artifact",
+      "status": "generated",
       "required": true,
-      "sha256": "aa7e41d17a0987c410b89d44f32dbdfbc9501a7f84984b702f70909d2e40d538",
-      "size_bytes": 98744,
+      "sha256": "b37793224342cc803f9c36a32160d5cbf9b67b5cb25b15f00335fa7190042480",
+      "size_bytes": 98828,
       "contains_todo_required": false
     },
     {
@@ -86,12 +86,12 @@
     },
     {
       "path": "dataset-metadata.json",
-      "purpose": "Anonymized Kaggle dataset metadata with neutral-owner placeholder, subtitle, description, tags, source note, update frequency, license, privacy, and cover image reference.",
-      "source_path_or_placeholder_status": "anonymized Kaggle metadata configured for neutral Kaggle account nobodyeh",
-      "status": "anonymized_group_metadata",
+      "purpose": "Kaggle dataset metadata: title, subtitle, description, keywords, license, and cover image.",
+      "source_path_or_placeholder_status": "Kaggle metadata for ahmadalmughrabi/rass-nerf-benchmark-artifact",
+      "status": "generated",
       "required": true,
-      "sha256": "9ad00bc9e89b72eb0e5994eaf05b46122125d512b040061e4f815a488f0e5b9e",
-      "size_bytes": 1622,
+      "sha256": "860df224cb7d208a47e913279f5559c4affb5352763ca9eb06ec0a79bacad0e2",
+      "size_bytes": 1629,
       "contains_todo_required": false
     },
     {

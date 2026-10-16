@@ -94,7 +94,7 @@ rass_kaggle_artifact_anonymous/dataset-metadata.json
 The current dataset ID is:
 
 ```text
-nobodyeh/rass-nerf-benchmark-artifact
+ahmadalmughrabi/rass-nerf-benchmark-artifact
 ```
 
 The package is configured as private through `isPrivate: true`.

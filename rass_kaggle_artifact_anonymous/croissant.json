@@ -73,9 +73,10 @@
     "BioNeRF",
     "DL3DV"
   ],
-  "url": "https://www.kaggle.com/datasets/nobodyeh/rass-nerf-benchmark-artifact",
+  "url": "https://www.kaggle.com/datasets/ahmadalmughrabi/rass-nerf-benchmark-artifact",
   "sameAs": [
-    "https://github.com/GCVCG/RASS"
+    "https://github.com/GCVCG/RASS",
+    "https://www.kaggle.com/datasets/nobodyeh/rass-nerf-benchmark-artifact"
   ],
   "version": "1.1.0",
   "isLiveDataset": false,
@@ -172,7 +173,7 @@
       "description": "Citation metadata for the paper/artifact, with remaining archival fields handled in the CFF file.",
       "contentUrl": "CITATION.cff",
       "encodingFormat": "text/plain",
-      "sha256": "16c14828d054aed698262843863a7cbcede66515ac94ecbf0dee497973893551"
+      "sha256": "9e1f7584f1ac7b02ae0938fdc50f7ffd958b6e2af9b55ba454bc6fe353823ab2"
     },
     {
       "@type": "cr:FileObject",

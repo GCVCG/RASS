@@ -4,7 +4,7 @@ title: "RASS / NeRF Benchmark Artifact"
 version: "1.1.0"
 date-released: "2026-10-08"
 license: "GPL-3.0-or-later"
-url: "https://www.kaggle.com/datasets/nobodyeh/rass-nerf-benchmark-artifact"
+url: "https://www.kaggle.com/datasets/ahmadalmughrabi/rass-nerf-benchmark-artifact"
 repository-code: "https://github.com/GCVCG/RASS"
 authors:
   - given-names: "Ahmad"
